@@ -14,6 +14,7 @@
 
   --accent-red: #ba7768;
   --accent-dim-red: #ab8c85;
+  --accent-dim2-red: #786966;
   --top-row-height: 80px;
 }
 
@@ -71,7 +72,6 @@ body {
   height: var(--top-row-height);
   width: 100%;
   padding-left: 20px;
-  -webkit-transition: ;
 }
 
 #content {
@@ -82,7 +82,21 @@ body {
   width: 100%;
   height: 80vh;
   padding: 20px;
-  overflow-y: scroll;
+  overflow-y: auto;
+}
+#content::before {
+  box-shadow: 4px 4px 9px 6px #000;
+}
+
+#content::-webkit-scrollbar {
+  background-color: none;
+  width: 12px;
+}
+
+#content::-webkit-scrollbar-thumb {
+  background-color: var(--accent-dim2-red);
+  border-radius: 20px;
+  border: 4px solid var(--page-bg);
 }
 
 #nav {
