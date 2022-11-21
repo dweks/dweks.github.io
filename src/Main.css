@@ -1,39 +1,178 @@
+@font-face {
+  font-family: "bahn";
+  src: url(BAHNSCHRIFT.TTF);
+}
+
+:root {
+  --text-white: rgb(210, 210, 210);
+  --text-dim-white: rgb(190, 190, 190);
+  --text-dim2-white: rgb(140, 140, 140);
+  --page-bg: #21201f;
+  --content-bg: #292827;
+  --card-bg: #2e2d2c;
+  --nav-bg: linear-gradient(var(--content-bg), var(--content-bg), #222120);
+
+  --accent-red: #ba7768;
+  --accent-dim-red: #ab8c85;
+  --top-row-height: 80px;
+}
+
 body {
-  background-color: rgb(30, 40, 52);
+  display: flex;
+  justify-content: center;
+  background-color: var(--page-bg);
+  color: #c8c8c8;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #main {
-  background-color: rgb(49, 93, 133);
+  background-color: none;
   display: flex;
-  flex-direction: column;
-  width: 80%;
+  justify-content: center;
+  width: 70vw;
   height: 100vh;
+  color: var(--text-white);
 }
 
 #main-left-col {
-  background-color: rgb(41, 81, 70);
-  display: flex;
+  position: sticky;
   flex-flow: row wrap;
-  width: 300px;
-  height: 100vh;
+  align-content: flex-start;
+  width: 35%;
+  margin-right: 9px;
 }
 
 #main-right-col {
-  background-color: rgb(30, 40, 52);
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  width: 100%;
 }
 
-#home-container {
-  background-color: rgb(30, 40, 52);
+#home {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: var(--top-row-height);
+  font-size: 20pt;
+  /* font-weight: 100; */
 }
 
-#main-nav-container {
-  background-color: rgb(30, 40, 52);
+#home-self {
+  border-radius: 10px;
+  margin-right: 12px;
 }
 
-#current-view-container {
-  background-color: rgb(30, 40, 52);
+#content-header {
+  display: flex;
+  /* background-image: linear-gradient(to right, var(--accent-red), var(--page-bg)); */
+  align-items: center;
+  font-size: 22pt;
+  height: var(--top-row-height);
+  width: 100%;
+  padding-left: 20px;
+  -webkit-transition: ;
 }
 
-#current-nav-container {
-  background-color: rgb(30, 40, 52);
+#content {
+  color: var(--text-dim-white);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--content-bg);
+  width: 100%;
+  height: 80vh;
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+#nav {
+  box-sizing: border-box;
+  background-image: var(--nav-bg);
+  height: 85vh;
+  width: 100%;
+  padding-top: 20px;
+  padding-left: 30px;
+}
+
+#red-sep {
+  position: absolute;
+  width: 4px;
+  height: 48px;
+  margin-left: -26px;
+  border-radius: 8px;
+  background-color: var(--accent-red);
+}
+
+.nav-link {
+  display: inline-block;
+  width: 100%;
+  font-size: 16pt;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--text-white);
+  margin-bottom: 15px;
+  transition: color 0.1s ease-in;
+  -webkit-transition: color 0.1s ease-in;
+  -moz-transition: color 0.1s ease-in;
+  -o-transition: color 0.1s ease-in;
+}
+
+.nav-link:hover {
+  color: var(--accent-red);
+}
+
+.card {
+  height: fit-content;
+  background-color: var(--card-bg);
+  padding: 15px;
+  margin-bottom: 25px;
+}
+
+.card h1 {
+  color: var(--text-white);
+  font-family: "bahn";
+  font-weight: 100;
+  font-size: 22pt;
+  margin: 0px 0px 2px 0px;
+}
+
+.card h4 {
+  font-family: "bahn";
+  font-weight: 100;
+  margin: 0px 0px 3px 0px;
+}
+
+.card em {
+  font-style: normal;
+  margin-right: 4px;
+  margin-left: 4px;
+  color: var(--text-dim2-white);
+}
+
+ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+ul li::before {
+  content: "\2022";
+  font-size: 1.2em;
+  color: var(--accent-dim-red);
+  display: inline-block;
+  font-weight: bold;
+  width: 1.1em;
+  margin-top: -0.3em;
+  margin-left: -1.5em;
+}
+
+.round-corner-lg {
+  border-radius: 12px;
+}
+
+.round-corner-sm {
+  border-radius: 10px;
+}
+
+.bahn {
+  font-family: "bahn";
 }
