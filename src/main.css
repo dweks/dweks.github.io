@@ -1,0 +1,228 @@
+@font-face {
+  font-family: "bahn";
+  src: url(BAHNSCHRIFT.TTF);
+}
+
+:root {
+  --white: rgb(210, 210, 210);
+  --gray: rgb(190, 190, 190);
+  --gray1: rgb(140, 140, 140);
+  --gray2: rgb(110, 110, 110);
+  --red: #ba7768;
+  --red5: #955f52;
+  --red4: #cd8e80;
+  --red1: #ab8c85;
+  --red2: #786966;
+  --red3: #baa29c;
+
+  --page-bg: #21201f;
+  --content-bg: #292827;
+  --card-bg: #2e2d2c;
+  --nav-bg: linear-gradient(var(--content-bg), var(--content-bg), #222120);
+
+  --top-row-height: 80px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: var(--page-bg);
+  color: #c8c8c8;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#main {
+  background-color: none;
+  display: flex;
+  justify-content: center;
+  width: 70vw;
+  height: 100vh;
+  color: var(--white);
+}
+
+#main-left-col {
+  position: sticky;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  width: 35%;
+  margin-right: 9px;
+}
+
+#main-right-col {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  width: 100%;
+}
+
+#home {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: var(--top-row-height);
+  font-size: 20pt;
+  /* font-weight: 100; */
+}
+
+#home-self {
+  border-radius: 10px;
+  margin-right: 12px;
+}
+
+#red-sep {
+  position: absolute;
+  width: 4px;
+  height: 48px;
+  margin-left: -26px;
+  border-radius: 8px;
+  background-color: var(--red5);
+}
+
+#content-header {
+  color: var(--red3);
+  display: flex;
+  align-items: center;
+  font-size: 24pt;
+  height: var(--top-row-height);
+  width: 100%;
+  padding-left: 20px;
+}
+
+#content {
+  color: var(--gray);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--content-bg);
+  width: 100%;
+  height: 80vh;
+  padding: 15px;
+  overflow-y: auto;
+  /* Firefox: */
+  scrollbar-width: 12px;
+  scrollbar-color: var(--red2) var(--content-bg);
+}
+
+#content::-webkit-scrollbar {
+  background-color: none;
+  width: 12px;
+}
+
+#content::-webkit-scrollbar-thumb {
+  background-color: var(--red2);
+  border-radius: 14px;
+  border: 4px solid var(--content-bg);
+  background-clip: padding-box;
+}
+
+#nav {
+  box-sizing: border-box;
+  background-image: var(--nav-bg);
+  height: 85vh;
+  width: 100%;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 10px;
+}
+
+#nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: inline-block;
+  width: 100%;
+  font-size: 16pt;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 15px;
+  transition: color 0.1s ease-in;
+
+  /* Color fade in/out */
+  -webkit-transition: color 0.1s ease-in;
+  -moz-transition: color 0.1s ease-in;
+  -o-transition: color 0.1s ease-in;
+}
+
+.nav-link:hover {
+  color: var(--red);
+}
+
+.nav-link-act {
+  color: var(--red);
+}
+
+/* Sub-navigation */
+
+.subnav {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+
+.subnav a {
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: var(--red3);
+}
+
+/* Card */
+
+.card {
+  height: fit-content;
+  background-color: var(--card-bg);
+  padding: 15px;
+  margin-bottom: 25px;
+}
+
+.card h1 {
+  color: var(--white);
+  font-family: "bahn";
+  font-weight: 100;
+  font-size: 22pt;
+  margin: 0px 0px 2px 0px;
+}
+
+.card h4 {
+  font-family: "bahn";
+  font-weight: 100;
+  margin: 0px 0px 3px 0px;
+}
+
+.card em {
+  font-style: normal;
+  margin-right: 4px;
+  margin-left: 4px;
+  color: var(--gray1);
+}
+
+.card ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.card ul li::before {
+  content: "\2022";
+  font-size: 1.2em;
+  color: var(--red1);
+  display: inline-block;
+  font-weight: bold;
+  width: 1.1em;
+  margin-top: -0.3em;
+  margin-left: -1.5em;
+}
+
+.round-corner-lg {
+  border-radius: 10px;
+}
+
+.round-corner-sm {
+  border-radius: 8px;
+}
+
+.bahn {
+  font-family: "bahn";
+}
