@@ -15,11 +15,11 @@
   --red1: #ab8c85;
   --red2: #786966;
   --red3: #baa29c;
-  --orange: #d39061;
 
   --page-bg: #21201f;
   --content-bg: #292827;
-  --card-bg: #2e2d2c;
+  --card-bg: rgb(50, 48, 47);
+  --card-bg2: #2e2d2c;
   --nav-bg: linear-gradient(var(--content-bg), var(--content-bg), #222120);
 
   --top-row-height: 80px;
@@ -31,6 +31,7 @@ body {
   background-color: var(--page-bg);
   color: #c8c8c8;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
 }
 
 #main {
@@ -43,10 +44,10 @@ body {
 }
 
 #main-left-col {
-  position: sticky;
   flex-flow: row wrap;
   align-content: flex-start;
-  width: 35%;
+  width: 300px;
+  min-width: 200px;
   margin-right: 9px;
 }
 
@@ -54,7 +55,7 @@ body {
   display: flex;
   flex-flow: row wrap;
   align-content: flex-start;
-  width: 100%;
+  min-width: 50vw;
 }
 
 #home {
@@ -63,7 +64,6 @@ body {
   width: 100%;
   height: var(--top-row-height);
   font-size: 20pt;
-  /* font-weight: 100; */
 }
 
 #home-self {
@@ -98,6 +98,7 @@ body {
   height: 80vh;
   padding: 15px;
   overflow-y: auto;
+  border-radius: 7px 15px 15px 7px;
   /* Firefox: */
   scrollbar-width: 12px;
   scrollbar-color: var(--red2) var(--content-bg);
@@ -116,13 +117,11 @@ body {
 }
 
 #nav {
-  box-sizing: border-box;
   background-image: var(--nav-bg);
   height: 85vh;
-  width: 100%;
   padding-top: 20px;
-  padding-left: 30px;
-  padding-right: 10px;
+  padding-left: 15px;
+  border-radius: 17px 7px 7px 17px;
 }
 
 #nav ul {
@@ -133,22 +132,27 @@ body {
 
 .nav-link {
   display: inline-block;
-  width: 100%;
+  width: 88%;
   font-size: 16pt;
   text-decoration: none;
   text-transform: uppercase;
   color: var(--white);
-  margin-bottom: 15px;
-  transition: color 0.1s ease-in;
+  margin-bottom: 8px;
+  padding-left: 15px;
+  padding-top:8px;
+  padding-bottom:6px;
+  border-radius: 8px;
 
   /* Color fade in/out */
-  -webkit-transition: color 0.1s ease-in;
-  -moz-transition: color 0.1s ease-in;
-  -o-transition: color 0.1s ease-in;
+  transition: color 0.1s ease-in, background-color 0.1s ease-in;
+  -webkit-transition: color 0.1s ease-in, background-color 0.1s ease-in;
+  -moz-transition: color 0.1s ease-in, background-color 0.1s ease-in;
+  -o-transition: color 0.1s ease-in, background-color 0.1s ease-in;
 }
 
 .nav-link:hover {
-  color: var(--red);
+  color: var(--red4);
+  background-color: var(--page-bg);
 }
 
 .nav-link-act {
@@ -160,7 +164,7 @@ body {
 .subnav {
   display: flex;
   flex-direction: column;
-  margin-left: 15px;
+  margin-left: 35px;
   margin-bottom: 20px;
 }
 
@@ -177,7 +181,7 @@ body {
 }
 
 .subnav a:hover {
-  color: var(--white);
+  color: var(--red4);
 }
 
 /* Card */

@@ -47,7 +47,7 @@ function ContentHeader() {
 // Main content; where site links are loaded
 function Content() {
   return (
-    <main id="content" className="round-corner-lg">
+    <main id="content">
       <Routes>
         <Route exact path="/" element={<About />} />
         <Route path="/about" element={<About />} />
@@ -61,7 +61,7 @@ function Content() {
 
 function Nav() {
   return (
-    <nav id="nav" className="round-corner-lg bahn">
+    <nav id="nav" className="bahn">
       <ul role="nav-links">
         <li role="link">
           <NavLink
