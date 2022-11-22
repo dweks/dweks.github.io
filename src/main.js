@@ -14,7 +14,7 @@ function Main() {
         <div id="home" className="bahn">
           <img
             src={profileSmall}
-            id="home-self"
+            id="home-img"
             alt="Picture of Blake Stephens"
             height="50px"
           />
@@ -47,15 +47,19 @@ function ContentHeader() {
 // Main content; where site links are loaded
 function Content() {
   return (
-    <main id="content">
-      <Routes>
-        <Route exact path="/" element={<About />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/experience" element={<Experience />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </main>
+    <>
+      <div id="shadow-top"></div>
+      <main id="content">
+        <Routes>
+          <Route exact path="/" element={<About />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+      <div id="shadow-bottom"></div>
+    </>
   );
 }
 
@@ -67,7 +71,7 @@ function Nav() {
           <NavLink
             to={"/about"}
             className={({ isActive }) => {
-              return isActive ?  "nav-link nav-link-act" : "nav-link";
+              return isActive ? "nav-link nav-link-act" : "nav-link";
             }}
           >
             About
@@ -81,7 +85,7 @@ function Nav() {
           <NavLink
             to={"/projects"}
             className={({ isActive }) => {
-              return isActive ?  "nav-link nav-link-act" : "nav-link";
+              return isActive ? "nav-link nav-link-act" : "nav-link";
             }}
           >
             Projects
@@ -95,7 +99,7 @@ function Nav() {
           <NavLink
             to={"/experience"}
             className={({ isActive }) => {
-              return isActive ?  "nav-link nav-link-act" : "nav-link";
+              return isActive ? "nav-link nav-link-act" : "nav-link";
             }}
           >
             Experience
@@ -109,7 +113,7 @@ function Nav() {
           <NavLink
             to={"/contact"}
             className={({ isActive }) => {
-              return isActive ?  "nav-link nav-link-act" : "nav-link";
+              return isActive ? "nav-link nav-link-act" : "nav-link";
             }}
           >
             Contact
