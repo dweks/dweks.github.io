@@ -5,15 +5,17 @@
 
 :root {
   --white: rgb(210, 210, 210);
-  --gray: rgb(190, 190, 190);
-  --gray1: rgb(140, 140, 140);
-  --gray2: rgb(110, 110, 110);
+  --gray: rgb(200, 200, 200);
+  --gray1: rgb(190, 190, 190);
+  --gray2: rgb(140, 140, 140);
+  --gray3: rgb(110, 110, 110);
   --red: #ba7768;
   --red5: #955f52;
   --red4: #cd8e80;
   --red1: #ab8c85;
   --red2: #786966;
   --red3: #baa29c;
+  --orange: #d39061;
 
   --page-bg: #21201f;
   --content-bg: #292827;
@@ -79,7 +81,6 @@ body {
 }
 
 #content-header {
-  color: var(--red3);
   display: flex;
   align-items: center;
   font-size: 24pt;
@@ -108,9 +109,9 @@ body {
 }
 
 #content::-webkit-scrollbar-thumb {
-  background-color: var(--red2);
-  border-radius: 14px;
-  border: 4px solid var(--content-bg);
+  background-color: var(--red5);
+  border-radius: 20px;
+  border: 5px solid var(--content-bg);
   background-clip: padding-box;
 }
 
@@ -166,7 +167,17 @@ body {
 .subnav a {
   text-decoration: none;
   margin-bottom: 10px;
-  color: var(--red3);
+  color: var(--gray1);
+
+  /* Color fade in/out */
+  transition: color 0.1s ease-in;
+  -webkit-transition: color 0.1s ease-in;
+  -moz-transition: color 0.1s ease-in;
+  -o-transition: color 0.1s ease-in;
+}
+
+.subnav a:hover {
+  color: var(--white);
 }
 
 /* Card */
@@ -196,7 +207,7 @@ body {
   font-style: normal;
   margin-right: 4px;
   margin-left: 4px;
-  color: var(--gray1);
+  color: var(--gray2);
 }
 
 .card ul {
