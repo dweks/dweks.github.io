@@ -1,0 +1,28 @@
+.subnav {
+  display: flex;
+  flex-direction: column;
+  margin-left: 35px;
+  margin-bottom: 00px;
+}
+
+@media screen and (max-width: 675px) {
+  .subnav {
+    display: none;
+  }
+}
+
+.subnav a {
+  text-decoration: none;
+  margin-bottom: 20px;
+  color: var(--gray1);
+
+  /* Color fade in/out */
+  transition: color 0.1s ease-in;
+  -webkit-transition: color 0.1s ease-in;
+  -moz-transition: color 0.1s ease-in;
+  -o-transition: color 0.1s ease-in;
+}
+
+.subnav a:hover {
+  color: var(--red4);
+}

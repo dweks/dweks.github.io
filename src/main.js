@@ -1,25 +1,15 @@
 import { Routes, Route, NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import About from "./pages/about";
-import Contact from "./pages/contact";
-import Experience from "./pages/experience";
-import Projects from "./pages/projects";
-import "./main.css";
+import * as Pages from "./pages/mod";
+import "./styles/main.css";
 import profileSmall from "./images/me.png";
 
+// Primary container for entire site; organized into two columns
 function Main() {
   return (
     <div id="main">
       <div id="main-left-col">
-        <div id="home" className="bahn">
-          <img
-            src={profileSmall}
-            id="home-img"
-            alt="Picture of Blake Stephens"
-            height="50px"
-          />
-          <p role="portfolio owner">Blake Stephens</p>
-        </div>
+        <Home id={"home-lg"} />
         <Nav />
       </div>
       <div id="main-right-col">
@@ -30,15 +20,30 @@ function Main() {
   );
 }
 
+// Contains my name and picture as link to default page
+function Home(props) {
+  return (
+    <div id={props.id} className="bahn">
+      <img
+        src={profileSmall}
+        alt="Small picture of Blake Stephens"
+        width="45px"
+      />
+      <p role="portfolio owner">Blake Stephens</p>
+    </div>
+  );
+}
+
+// Header for content loaded from nav; updates through routes
 function ContentHeader() {
   return (
     <header id="content-header" className="bahn">
-      <div id="red-sep"></div>
+      <div id="red-sep" role="aesthetic" />
       <Routes>
-        <Route path="/about" element={<p>ABOUT</p>} />
-        <Route path="/projects" element={<p>PROJECTS</p>} />
-        <Route path="/experience" element={<p>EXPERIENCE</p>} />
-        <Route path="/contact" element={<p>CONTACT</p>} />
+        <Route path="/about" element={"ABOUT"} />
+        <Route path="/projects" element={"PROJECTS"} />
+        <Route path="/experience" element={"EXPERIENCE"} />
+        <Route path="/contact" element={"CONTACT"} />
       </Routes>
     </header>
   );
@@ -51,11 +56,11 @@ function Content() {
       <div id="shadow-top"></div>
       <main id="content">
         <Routes>
-          <Route exact path="/" element={<About />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route exact path="/" element={<Pages.About />} />
+          <Route path="/about" element={<Pages.About />} />
+          <Route path="/projects" element={<Pages.Projects />} />
+          <Route path="/experience" element={<Pages.Experience />} />
+          <Route path="/contact" element={<Pages.Contact />} />
         </Routes>
       </main>
       <div id="shadow-bottom"></div>
@@ -63,9 +68,12 @@ function Content() {
   );
 }
 
+// Main navigation; vertical at higher screen widths, horizontal at lower
 function Nav() {
   return (
     <nav id="nav" className="bahn">
+    <Home id={"home-sm"} />
+      <div id="red-sep-sm"></div>
       <ul role="nav-links">
         <li role="link">
           <NavLink

@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "bahn";
+  src: url(BAHNSCHRIFT.TTF);
+}
+
+:root {
+  --white: rgb(210, 210, 210);
+  --gray: rgb(200, 200, 200);
+  --gray1: rgb(190, 190, 190);
+  --gray2: rgb(140, 140, 140);
+  --gray3: rgb(110, 110, 110);
+  --gray4: rgb(80, 80, 80);
+  --red: #ba7768;
+  --red5: #955f52;
+  --red4: #cd8e80;
+  --red1: #ab8c85;
+  --red2: #786966;
+  --red3: #baa29c;
+
+  --page-bg: #21201f;
+  --page-bg2: #1d1c1b;
+  --content-bg: #292827;
+  --card-bg: rgb(48, 46, 45);
+  --card-bg2: #2e2c2c;
+  --nav-bg: linear-gradient(
+    190deg,
+    var(--content-bg),
+    var(--content-bg),
+    var(--page-bg)
+  );
+  --nav-bg-sm: linear-gradient(var(--content-bg), #222120);
+  --header-bg: linear-gradient(180deg, #267524, var(--page-bg));
+
+  --top-row-height: 80px;
+}
+
+.round-corner-lg {
+  border-radius: 10px;
+}
+
+.round-corner-sm {
+  border-radius: 8px;
+}
+
+.bahn {
+  font-family: "bahn";
+}

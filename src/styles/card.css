@@ -1,0 +1,43 @@
+.card {
+  height: fit-content;
+  background-color: var(--card-bg2);
+  padding: 15px;
+  margin-bottom: 25px;
+}
+
+.card h1 {
+  color: var(--white);
+  font-family: "bahn";
+  font-weight: 100;
+  font-size: 22pt;
+  margin: 0px 0px 2px 0px;
+}
+
+.card h4 {
+  font-family: "bahn";
+  font-weight: 100;
+  margin: 0px 0px 3px 0px;
+}
+
+.card em {
+  font-style: normal;
+  margin-right: 4px;
+  margin-left: 4px;
+  color: var(--gray2);
+}
+
+.card ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.card ul li::before {
+  content: "\2022";
+  font-size: 1.2em;
+  color: var(--red1);
+  display: inline-block;
+  font-weight: bold;
+  width: 1.1em;
+  margin-top: -0.3em;
+  margin-left: -1.5em;
+}
