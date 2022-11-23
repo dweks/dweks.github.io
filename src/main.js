@@ -20,15 +20,11 @@ function Main() {
   );
 }
 
-// Contains my name and picture as link to default page
+// Contains my name and picture, both link to default page
 function Home(props) {
   return (
     <div id={props.id} className="bahn">
-      <img
-        src={profileSmall}
-        alt="Small picture of Blake Stephens"
-        width="45px"
-      />
+      <img src={profileSmall} alt="Thumbnail of Blake Stephens" width="45px" />
       <p role="portfolio owner">Blake Stephens</p>
     </div>
   );
@@ -72,7 +68,7 @@ function Content() {
 function Nav() {
   return (
     <nav id="nav" className="bahn">
-    <Home id={"home-sm"} />
+      <Home id={"home-sm"} />
       <div id="red-sep-sm"></div>
       <ul role="nav-links">
         <li role="link">
@@ -82,7 +78,7 @@ function Nav() {
               return isActive ? "nav-link nav-link-act" : "nav-link";
             }}
           >
-            About
+            {"About"}
           </NavLink>
           <Routes>
             <Route path="/about" element={<SubNav />} />
