@@ -17,29 +17,36 @@
   --red2: #786966;
   --red3: #baa29c;
 
+  --content-header: #b6b1af;
+  --home: #d49e88;
+  --card-header: #c19571;
+  --sep: #5e524f;
+  --sb: #4a443f;
+  --card-top: rgb(46, 44, 44);
+  --card-bot: #333232;
+  --page-end:#46423f;
+
   --page-bg: #21201f;
   --page-bg2: #1d1c1b;
+  --page-bg3: #242221;
   --content-bg: #292827;
-  --card-bg: rgb(48, 46, 45);
+  --content-bg2: #272525;
   --card-bg2: #2e2c2c;
   --nav-bg: linear-gradient(
-    190deg,
-    var(--content-bg),
-    var(--content-bg),
+    200deg,
+    var(--content-bg2),
+    var(--content-bg2),
     var(--page-bg)
+  );
+  --content-bg-grad: linear-gradient(
+    135deg,
+    var(--content-bg),
+    var(--page-bg3)
   );
   --nav-bg-sm: linear-gradient(var(--content-bg), #222120);
   --header-bg: linear-gradient(180deg, #267524, var(--page-bg));
 
   --top-row-height: 80px;
-}
-
-.round-corner-lg {
-  border-radius: 10px;
-}
-
-.round-corner-sm {
-  border-radius: 8px;
 }
 
 .bahn {

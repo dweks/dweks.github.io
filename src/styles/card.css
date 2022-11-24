@@ -1,34 +1,55 @@
 .card {
-  height: fit-content;
-  background-color: var(--card-bg2);
-  padding: 15px;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+
+
+.card-top {
+  background-color: var(--card-top);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px 15px 13px 15px;
+  border-radius: 16px 8px 0px 0px;
+}
+
+.card-bottom {
+  padding: 5px 15px 13px 15px;
+  background-color: var(--card-bot);
+  font-weight: 300;
+  border-radius: 0px 0px 8px 8px;
 }
 
 .card h1 {
-  color: var(--white);
-  font-family: "bahn";
+  color: var(--card-header);
   font-weight: 100;
-  font-size: 22pt;
+  font-size: 24pt;
   margin: 0px 0px 2px 0px;
 }
 
 .card h4 {
-  font-family: "bahn";
-  font-weight: 100;
-  margin: 0px 0px 3px 0px;
+  color: var(--gray1);
+  font-weight: 500;
+  font-size: 12pt;
+  margin: 0px 0px 2px 0px;
 }
 
-.card em {
-  font-style: normal;
-  margin-right: 4px;
-  margin-left: 4px;
-  color: var(--gray2);
+.card-desc {
+  font-size: larger;
+}
+
+.card-top p {
+  color: var(--gray1);
+  font-weight: 100;
+  margin: 0px 5px 3px 0px;
+  text-align: right;
+  align-self: center;
 }
 
 .card ul {
+  margin-top: 5px;
   list-style: none;
-  margin-top: 10px;
+  list-style-position: outside;
 }
 
 .card ul li::before {
@@ -40,4 +61,14 @@
   width: 1.1em;
   margin-top: -0.3em;
   margin-left: -1.5em;
+  overflow-wrap: break-word;
+}
+
+@media screen and (max-width: 975px) {
+  .card-top {
+    flex-direction: column;
+  }
+  .card-top p {
+    text-align: left;
+  }
 }

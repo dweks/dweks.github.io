@@ -1,5 +1,15 @@
+import { motion } from "framer-motion";
 const About = () => {
-  return <div>About</div>;
+  return (
+    <motion.div
+      role="animation"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{duration: .2}}
+    >
+      ABOUT
+    </motion.div>
+  );
 };
 
 export default About;

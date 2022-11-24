@@ -1,10 +1,27 @@
+#nav-end {
+  background-color: var(--gray4);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100px;
+  height: 4px;
+  border-radius: 10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
 #nav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: var(--top-row-height);
   background-image: var(--nav-bg);
-  height: 70vh;
   width: 220px;
   padding-top: 20px;
   padding-left: 8px;
-  border-radius: 19px 7px 7px 17px;
+  padding-bottom: 50px;
+  border-radius: 19px 7px 7px 15px;
+  z-index: 2;
+  box-shadow: -10px 10px 20px 0px var(--page-bg2);
 }
 
 #nav ul {
@@ -16,16 +33,17 @@
 .nav-link {
   display: inline-block;
   width: 88%;
+  font-family: "bahn";
   font-size: 16pt;
+  font-weight: 100;
   text-decoration: none;
   text-transform: uppercase;
-  /* color: var(--white); */
   color: var(--gray1);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   padding-left: 15px;
   padding-top: 6px;
   padding-bottom: 4px;
-  border-radius: 8px;
+  border-radius: 8px 15px 8px 8px;
 
   /* Color fade in/out */
   transition: color 0.1s ease-in, background-color 0.1s ease-in;
@@ -40,7 +58,36 @@
 }
 
 .nav-link-act {
-  color: var(--red);
+  color: var(--red3);
+  background-color: var(--page-bg);
+}
+
+.subnav {
+  display: flex;
+  flex-direction: column;
+  margin-left: 35px;
+}
+
+@media screen and (max-width: 675px) {
+  .subnav {
+    display: none !important;
+  }
+}
+
+.subnav a {
+  text-decoration: none;
+  margin-bottom: 15px;
+  color: var(--gray1);
+
+  /* Color fade in/out */
+  transition: color 0.1s ease-in;
+  -webkit-transition: color 0.1s ease-in;
+  -moz-transition: color 0.1s ease-in;
+  -o-transition: color 0.1s ease-in;
+}
+
+.subnav a:hover {
+  color: var(--red4);
 }
 
 @media screen and (max-width: 675px) {
@@ -59,7 +106,7 @@
     top: 11px;
     left: 50%;
     transform: translate(-50%, -12%);
-    box-shadow: 0px 10px 18px -10px var(--page-bg);
+    box-shadow: 0px 10px 20px 0px var(--page-bg);
   }
 
   #nav ul {
@@ -83,12 +130,6 @@
 }
 
 @media screen and (max-width: 376px) {
-  .nav-link {
-    font-size: 10.5pt;
-  }
-}
-
-@media screen and (max-width: 321px) {
   #nav {
     top: 9px;
     padding: 10px;
