@@ -1,12 +1,11 @@
 const Card = (props) => {
   return (
-    <section id={props.target} className="card">
-      <div className="card-top">
-        {props.header}
-        {props.date}
+    <section id={props.target} className={props.class}>
+      <div className="card-1">
+        {props.one}
       </div>
-      <div className="card-bottom">
-        {props.content}
+      <div className="card-2">
+        {props.two}
       </div>
     </section>
   );

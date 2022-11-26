@@ -1,0 +1,37 @@
+/* Global */
+
+.overview {
+  margin-left: 10px;
+}
+
+/* Experience */
+
+.exp-one {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.exp-one p {
+  color: var(--gray1);
+  font-weight: 100;
+  font-size: 12pt;
+  margin: 0px 5px 3px 0px;
+  text-align: right;
+  align-self: center;
+}
+
+@media screen and (max-width: 1020px) {
+  .overview {
+    margin: 10px;
+  }
+  .exp-one{
+    flex-direction: column;
+    align-self: flex-start;
+    margin-left: 0;
+  }
+  .exp-one p {
+    align-self: flex-start;
+  }
+}

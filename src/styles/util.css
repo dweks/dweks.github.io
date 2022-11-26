@@ -1,5 +1,6 @@
 @font-face {
   font-family: "bahn";
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   src: url(BAHNSCHRIFT.TTF);
 }
 
@@ -17,14 +18,17 @@
   --red2: #786966;
   --red3: #baa29c;
 
+  --nav-act: #c48166;
   --content-header: #b6b1af;
-  --home: #d49e88;
-  --card-header: #c19571;
+  --home: #bfb2ac;
+  --home-sub: #867972;
+  --card-header: #b39379;
   --sep: #5e524f;
   --sb: #4a443f;
   --card-top: rgb(46, 44, 44);
   --card-bot: #333232;
-  --page-end:#46423f;
+  --page-end:#363331;
+  --nav-end:#2c2a28;
 
   --page-bg: #21201f;
   --page-bg2: #1d1c1b;

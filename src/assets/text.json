@@ -1,0 +1,76 @@
+{
+  "myname": "Blake Stephens",
+  "subtitle" :"Dev Portfolio",
+  "pages": {
+    "about": {},
+
+    "experience": {
+      "overview": "During my education I've pursued a variety of experiences ranging from...",
+
+      "exp1": {
+        "header": "Lab Facilitator",
+        "subheader": "Portland State University",
+        "date": "September 2021 to December 2022",
+        "desc": "description",
+        "list": [
+          "Presenting and explaining data structure concepts to groups of students in labs",
+          "Guiding individual students to solutions for programming problems using C++",
+          "Developing and maintaining C++ code bases for use in computer science labs",
+          "Coordinating lab and lecture materials development with project management software",
+          "Proctoring student exams and coding proficiency demonstrations",
+          "Training new employees with debugging exercises and code discussions"
+        ]
+      },
+
+      "exp2": {
+        "header": "Front-end Developer",
+        "subheader": "PSU: Capstone Project",
+        "date": "March 2022 to September 2022",
+        "desc": "description",
+        "list": [
+          "Developing an interactive web application using Node.js and React.js with TypeScript",
+          "Data modeling for a graph data structure implemented with an MVC architecture",
+          "Scrum-like collaborative procedures with a team of peers",
+          "Collaborating with continuous integration using git and GitLab with CI/CD",
+          "Researching unfamiliar technologies for use in project development"
+        ]
+      },
+
+      "exp3": {
+        "header": "IT Help Desk Volunteer",
+        "subheader": "Portland State University",
+        "date": "October 2020 to May 2021",
+        "desc": "description",
+        "list": [
+          "Working directly with MCECS students and faculty for IT troubleshooting",
+          "Collaborating on revisions to technical documentation and website content",
+          "Attending weekly informational presentations on IT subjects",
+          "Troubleshooting Linux system infrastructure issues"
+        ]
+      }
+    },
+
+    "skills": {},
+
+    "projects": {
+      "overview": "Below are the coding projects I've worked on. Most of them are personal projects of varying sizes...",
+      "proj1": {
+        "name": "Isle of Trust",
+        "language": "python",
+        "desc": "A quick, command-based note-taking utility designed for people who spend a lot of time in a terminal."
+      },
+      "proj2": {
+        "name": "qnot",
+        "language": "python",
+        "desc": "A quick, command-based note-taking utility designed for people who spend a lot of time in a terminal."
+      },
+      "proj3": {
+        "name": "solitaire",
+        "language": "Java",
+        "desc": "A quick, command-based note-taking utility designed for people who spend a lot of time in a terminal."
+      }
+    },
+
+    "contact": {}
+  }
+}

@@ -1,22 +1,31 @@
 import { Routes, Route, NavLink, Navigate } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import { Fragment } from "react";
 import Experience from "./pages/experience";
 import About from "./pages/about";
 import Contact from "./pages/contact";
 import Projects from "./pages/projects";
 import "./styles/main.css";
-import profileSmall from "./images/me.png";
-import { AnimatePresence, motion } from "framer-motion";
+import logoSmall from "./images/logo.png";
+import { motion } from "framer-motion";
+import text from "./assets/text.json";
+
+const aboutPageText = JSON.parse(JSON.stringify(text.pages.about));
+const experiencePageText = JSON.parse(JSON.stringify(text.pages.experience));
+const skillsPageText = JSON.parse(JSON.stringify(text.pages.skills));
+const projectsPageText = JSON.parse(JSON.stringify(text.pages.projects));
+const contactPageText = JSON.parse(JSON.stringify(text.pages.contact));
+const pageTitles = JSON.parse(JSON.stringify(text.pages));
 
 // Primary container for entire site; organized into two columns
 function Main() {
   return (
     <div id="main">
-      <div id="main-left-col">
+      <div id="main-one">
         <Home id={"home-lg"} />
         <Nav />
       </div>
-      <div id="main-right-col">
+      <div id="main-two">
         <ContentHeader />
         <Content />
       </div>
@@ -28,75 +37,38 @@ function Main() {
 function Home(props) {
   return (
     <div id={props.id}>
-      <img src={profileSmall} alt="Thumbnail of Blake Stephens" width="45px" />
-      <p role="portfolio owner">Blake Stephens</p>
+      <img src={logoSmall} alt="Thumbnail of Blake Stephens" width="45px" />
+      <h1 role="portfolio owner">{text.myname}</h1>
+      <h6>{text.subtitle}</h6>
     </div>
   );
 }
 
 // Header for content loaded from nav; updates through routes
 function ContentHeader() {
-  const yOffset = -40;
-  const dur = 0.3;
-
   return (
     <header id="content-header" className="bahn">
       <div id="sep" role="aesthetic" />
       <Routes>
         <Route exact path="/" element={<Navigate to="/about" />} />
-        <Route
-          path="/about"
-          element={
-            <motion.p
-              key={"about"}
-              initial={{ opacity: 0, y: yOffset }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: dur }}
-            >
-              ABOUT
-            </motion.p>
-          }
-        />
-
-        <Route
-          path="/projects"
-          element={
-            <motion.p
-              key={"projects"}
-              initial={{ opacity: 0, y: yOffset }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: dur }}
-            >
-              PROJECTS
-            </motion.p>
-          }
-        />
-        <Route
-          path="/experience"
-          element={
-            <motion.p
-              key={"experience"}
-              initial={{ opacity: 0, y: yOffset }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: dur }}
-            >
-              EXPERIENCE
-            </motion.p>
-          }
-        />
-        <Route
-          path="/contact"
-          element={
-            <motion.p
-              key={"contact"}
-              initial={{ opacity: 0, y: yOffset }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: dur }}
-            >
-              CONTACT
-            </motion.p>
-          }
-        />
+        {Object.keys(pageTitles).map((entry) => {
+          return (
+            <Route
+              key={entry}
+              path={"/" + entry}
+              element={
+                <motion.p
+                  key={entry + " motion"}
+                  initial={{ opacity: 0, y: -40 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {entry}
+                </motion.p>
+              }
+            />
+          );
+        })}
       </Routes>
     </header>
   );
@@ -106,17 +78,30 @@ function ContentHeader() {
 function Content() {
   return (
     <>
-      <div id="shadow-top"></div>
+      {/* <div id="shadow-top"></div> */}
       <main id="content">
         <Routes>
-          <Route exact path="/" element={<About />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route exact path="/" element={<About text={aboutPageText} />} />
+          <Route path={"/about"} element={<About text={aboutPageText} />} />
+          <Route
+            path={"/experience"}
+            element={<Experience text={experiencePageText} />}
+          />
+          <Route
+            path={"/skills"}
+            element={<Contact text={contactPageText} />}
+          />
+          <Route
+            path={"/projects"}
+            element={<Projects text={projectsPageText} />}
+          />
+          <Route
+            path={"/contact"}
+            element={<Contact text={contactPageText} />}
+          />
         </Routes>
       </main>
-      <div id="shadow-bottom"></div>
+      {/* <div id="shadow-bottom"></div> */}
     </>
   );
 }
@@ -124,77 +109,71 @@ function Content() {
 // Main navigation; vertical at higher screen widths, horizontal at lower
 function Nav() {
   return (
-    <>
     <nav id="nav">
       <Home id={"home-sm"} />
       <div id="sep-sm" role="aesthetics" />
-      <NavLink
-        to={"/about"}
-        className={({ isActive }) => {
-          return isActive ? "nav-link nav-link-act" : "nav-link";
-        }}
-      >
-        {"About"}
-      </NavLink>
-      <Routes>
-        <Route path="/about" element={<SubNav key={"about"} />} />
-      </Routes>
-      <NavLink
-        to={"/projects"}
-        className={({ isActive }) => {
-          return isActive ? "nav-link nav-link-act" : "nav-link";
-        }}
-      >
-        {"Projects"}
-      </NavLink>
-      <Routes>
-        <Route path="/projects" element={<SubNav key={"projects"} />} />
-      </Routes>
-      <NavLink
-        to={"/experience"}
-        className={({ isActive }) => {
-          return isActive ? "nav-link nav-link-act" : "nav-link";
-        }}
-      >
-        {"Experience"}
-      </NavLink>
-      <Routes>
-        <Route path="/experience" element={<SubNav key={"experience"} />} />
-      </Routes>
+      {Object.keys(pageTitles).map((page) => {
+        return (
+          <Fragment key={page + "nav"}>
+            <NavLink
+              to={"/" + page}
+              className={({ isActive }) => {
+                return isActive ? "nav-link nav-link-act" : "nav-link";
+              }}
+            >
+              {page}
+            </NavLink>
+            <Routes>
+              <Route
+                key={page}
+                path={"/" + page}
+                element={<SubNav key={page} page={page} />}
+              />
+            </Routes>
+          </Fragment>
+        );
+      })}
 
-      <NavLink
-        to={"/contact"}
-        className={({ isActive }) => {
-          return isActive ? "nav-link nav-link-act" : "nav-link";
-        }}
-      >
-        {"Contact"}
-      </NavLink>
-      <Routes>
-        <Route path="/contact" element={<SubNav key={"contact"} />} />
-      </Routes>
+      <div id="nav-end" role="aesthetics" />
     </nav>
-    <div className="nav-end" role="aesthetics" />
-    </>
   );
 }
 
+const subnavs = {
+  about: ["abouty"],
+  experience: Object.keys(experiencePageText).map((item) => {
+    if (experiencePageText[item].header != undefined) {
+      return experiencePageText[item].header;
+    }
+  }),
+  projects: Object.keys(projectsPageText).map((item) => {
+    if (item.localeCompare("overview")) {
+      return projectsPageText[item].name;
+    }
+  }),
+  skills: ["skillsy"],
+  contact: ["contacty"],
+};
+
 function SubNav(props) {
   return (
-    <AnimatePresence>
-      <motion.nav
-        key={props.key}
-        className={"subnav"}
-        initial={{ opacity: 0, height: 0 }}
-        animate={{ opacity: 1, height: "auto" }}
-        transition={{ duration: 0.2 }}
-        exit={{ opacity: 0, height: 0 }}
-      >
-        <HashLink to="/experience#1">Lab Facilitator</HashLink>
-        <HashLink to="/experience#2">Frontend Developer</HashLink>
-        <HashLink to="/experience#3">IT Help Desk Volunteer</HashLink>
-      </motion.nav>
-    </AnimatePresence>
+    <motion.nav
+      className={"subnav"}
+      initial={{ opacity: 0, height: 0 }}
+      animate={{ opacity: 1, height: "auto" }}
+      transition={{ duration: 0.2 }}
+    >
+      {subnavs[props.page].map((item) => {
+        return (
+          <HashLink
+            key={item + " subnav link"}
+            to={"/" + props.page + "#" + item}
+          >
+            {item}
+          </HashLink>
+        );
+      })}
+    </motion.nav>
   );
 }
 

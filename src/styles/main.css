@@ -2,50 +2,68 @@
 @import "content.css";
 @import "card.css";
 @import "util.css";
+@import "pages.css";
 
 body {
-  margin: 0 auto;
   display: flex;
   justify-content: center;
   background-color: var(--page-bg);
   /* background-image: linear-gradient(#211f1e, var(--page-bg)); */
-  color: #c8c8c8;
+  color: var(--white);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0 auto;
 }
 
+p {
+  font-size: larger;
+  font-weight: 300;
+}
+
 #main {
-  background-color: none;
+  box-sizing: border-box;
   display: flex;
-  justify-content: center;
-  width: 80vw;
-  max-width: 1000px;
-  height: 100%;
-  color: var(--white);
+  flex-direction: row;
+  max-height: 99vh;
 }
 
-#main-left-col {
-  display: inline-block;
-  height: 100%;
-  margin-right: 9px;
+#main-one {
+  width: 225px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  margin-right: 8px;
+  /* background-color: red; */
 }
 
-#main-right-col {
+#main-two {
   display: flex;
-  flex-flow: row wrap;
-  align-content: flex-start;
-  width: 77vw;
-  min-width: 400px;
+  flex-direction: column;
+  width: 55vw;
+  max-height: 100%;
+  /* background-color: blue; */
 }
 
 #home-lg {
-  color: var(--home);
-  position: fixed;
   display: flex;
-  align-items: center;
+  flex-direction:column;
+  color: var(--home);
+  display: flex;
   width: 100%;
-  font-size: 16pt;
   height: var(--top-row-height);
+  padding-left: 20px;
+}
+
+#home-lg h1 {
+  font-size: 20pt;
+  font-weight: 200;
+  margin-bottom: 0;
+}
+
+#home-lg h6 {
+  margin: 0;
+  font-size: 10pt;
+  font-weight: 500;
+  color: var(--home-sub);
 }
 
 #home-sm {
@@ -54,54 +72,27 @@ body {
 
 #home-lg img,
 #home-sm img {
-  border-radius: 10px;
-  margin-right: 12px;
+  display:none;
+  margin-right: 10px;
 }
 
 @media screen and (max-width: 675px) {
-  #main {
-    flex-flow: row wrap;
-    width: 100vw;
-    margin: 52px 3px 3px 3px;
-    align-content: center;
+  body {
+    display: inline-block;
   }
 
-  #main-left-col,
-  #main-right-col {
-    width: 100%;
-    height: auto;
-    margin: 0px;
-    padding: 0px;
+  #main {
+    flex-direction: column;
+    width: 100;
     min-width: auto;
-    align-content: center;
+  }
+
+  #main-two {
+    width: auto;
+    margin-top: 50px;
   }
 
   #home-lg {
-    position: fixed;
     display: none;
-  }
-
-  #home-sm {
-    display: flex;
-    align-items: center;
-    font-size: 14pt;
-  }
-  #home-sm img {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 550px) {
-  #main {
-    margin-top: 35px;
-  }
-  #home-sm p {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 321px) {
-  #main {
-    margin-top: 35px;
   }
 }

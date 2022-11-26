@@ -1,10 +1,32 @@
 .card {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   word-wrap: break-word;
 }
 
+.card-v {
+  display: flex;
+  flex-direction: column;
+}
 
-.card-top {
+.card-h {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-h .card-1 {
+  background-color: var(--card-top);
+  padding: 5px 15px 13px 15px;
+  border-radius: 16px 0px 0px 8px;
+}
+
+.card-h .card-2 {
+  background-color: var(--card-bot);
+  width: 100%;
+  padding: 5px 15px 13px 15px;
+  border-radius: 0px 15px 8px 0px;
+}
+
+.card-v .card-1 {
   background-color: var(--card-top);
   display: flex;
   flex-direction: row;
@@ -13,8 +35,8 @@
   border-radius: 16px 8px 0px 0px;
 }
 
-.card-bottom {
-  padding: 5px 15px 13px 15px;
+.card-v .card-2 {
+  padding: 5px 10px 13px 15px;
   background-color: var(--card-bot);
   font-weight: 300;
   border-radius: 0px 0px 8px 8px;
@@ -36,18 +58,11 @@
 
 .card-desc {
   font-size: larger;
-}
-
-.card-top p {
-  color: var(--gray1);
-  font-weight: 100;
-  margin: 0px 5px 3px 0px;
-  text-align: right;
-  align-self: center;
+  margin-top: 0;
+  padding-top: 5px;
 }
 
 .card ul {
-  margin-top: 5px;
   list-style: none;
   list-style-position: outside;
 }
@@ -64,11 +79,11 @@
   overflow-wrap: break-word;
 }
 
-@media screen and (max-width: 975px) {
-  .card-top {
+@media screen and (max-width: 675px) {
+  .card-v .card-1 {
     flex-direction: column;
   }
-  .card-top p {
+  .card-1 p {
     text-align: left;
   }
 }
