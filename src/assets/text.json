@@ -1,11 +1,24 @@
 {
   "myname": "Blake Stephens",
-  "subtitle" :"Dev Portfolio",
+  "subtitle": "Dev Portfolio",
   "pages": {
-    "about": {},
+    "about": {
+      "intro": {
+        "greeting": "Hello, I'm Blake.",
+        "desc": "Here is an intro of me Here is an intro of me Here is an intro of me Here is an intro of me Here is an intro of me Here is an intro of me Here is an intro of me "
+      },
+      "bio1": {
+        "header": "Education",
+        "desc": "Here is my education history."
+      },
+      "bio2": {
+        "header": "Interests",
+        "desc": "Here is a description of my interests"
+      }
+    },
 
     "experience": {
-      "overview": "During my education I've pursued a variety of experiences ranging from...",
+      "intro": "During my education I've pursued a variety of experiences ranging from...",
 
       "exp1": {
         "header": "Lab Facilitator",
@@ -53,7 +66,7 @@
     "skills": {},
 
     "projects": {
-      "overview": "Below are the coding projects I've worked on. Most of them are personal projects of varying sizes...",
+      "intro": "Below are the coding projects I've worked on. Most of them are personal projects of varying sizes...",
       "proj1": {
         "name": "Isle of Trust",
         "language": "python",

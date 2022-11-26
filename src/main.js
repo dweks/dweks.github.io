@@ -140,14 +140,18 @@ function Nav() {
 }
 
 const subnavs = {
-  about: ["abouty"],
+  about: Object.keys(aboutPageText).map((item) => {
+    if (item !== "intro") {
+      return aboutPageText[item].header;
+    }
+  }),
   experience: Object.keys(experiencePageText).map((item) => {
-    if (experiencePageText[item].header != undefined) {
+    if (item !== "intro") {
       return experiencePageText[item].header;
     }
   }),
   projects: Object.keys(projectsPageText).map((item) => {
-    if (item.localeCompare("overview")) {
+    if (item !== "intro") {
       return projectsPageText[item].name;
     }
   }),

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Card from "../card";
 
-const cardType = "card card-v";
+
 
 const Experience = (props) => {
   return (
@@ -12,9 +12,9 @@ const Experience = (props) => {
       transition={{ duration: 0.3 }}
     >
       {Object.keys(props.text).map((entry) => {
-        if (entry === "overview") {
+        if (entry === "intro") {
           return (
-            <p key={entry} className="overview">
+            <p key={entry} className="intro">
               {props.text[entry]}
             </p>
           );
@@ -22,7 +22,7 @@ const Experience = (props) => {
         return (
           <Card
             key={props.text[entry].header}
-            class={cardType}
+            class={"card card-v"}
             target={props.text[entry].header}
             one={
               <div className="exp-one">

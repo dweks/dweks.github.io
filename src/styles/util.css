@@ -1,6 +1,5 @@
 @font-face {
   font-family: "bahn";
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   src: url(BAHNSCHRIFT.TTF);
 }
 
@@ -29,6 +28,7 @@
   --card-bot: #333232;
   --page-end:#363331;
   --nav-end:#2c2a28;
+  --card-single: #2b2928;
 
   --page-bg: #21201f;
   --page-bg2: #1d1c1b;
@@ -51,6 +51,13 @@
   --header-bg: linear-gradient(180deg, #267524, var(--page-bg));
 
   --top-row-height: 80px;
+}
+
+h2 {
+  color: var(--white);
+  margin: 0;
+  font-weight: 300;
+  font-size: 20pt;
 }
 
 .bahn {

@@ -1,6 +1,6 @@
 /* Global */
 
-.overview {
+.intro {
   margin-left: 10px;
 }
 
@@ -34,4 +34,10 @@
   .exp-one p {
     align-self: flex-start;
   }
+}
+
+/* About */
+
+.card img {
+  border-radius: 14px;
 }

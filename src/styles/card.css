@@ -3,6 +3,16 @@
   word-wrap: break-word;
 }
 
+.card-single {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 12px;
+  background-color: var(--card-single);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
 .card-v {
   display: flex;
   flex-direction: column;
@@ -15,13 +25,12 @@
 
 .card-h .card-1 {
   background-color: var(--card-top);
-  padding: 5px 15px 13px 15px;
-  border-radius: 16px 0px 0px 8px;
+  padding: 12px;
+  border-radius: 16px 0px 0px 16px;
 }
 
 .card-h .card-2 {
   background-color: var(--card-bot);
-  width: 100%;
   padding: 5px 15px 13px 15px;
   border-radius: 0px 15px 8px 0px;
 }
@@ -31,7 +40,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 5px 15px 13px 15px;
+  padding: 5px 15px 8px 15px;
   border-radius: 16px 8px 0px 0px;
 }
 
@@ -86,4 +95,24 @@
   .card-1 p {
     text-align: left;
   }
+
+}
+
+@media screen and (max-width: 1000px) {
+  .card-h {
+    flex-direction:column;
+  }
+
+  .card-h .card-1 {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .card-h .card-2 {
+    border-radius: 0 0 10px 10px;
+  }
+
+  .card-h img {
+    width: 100%;
+  }
+
 }

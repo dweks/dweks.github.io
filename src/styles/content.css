@@ -71,7 +71,7 @@
   overflow-y: scroll;
 
   width: 100%;
-  padding: 12px 6px 12px 12px;
+  padding: 12px 6px 12px 16px;
 
   color: var(--gray);
   background-color: var(--content-bg);
@@ -107,7 +107,7 @@
 
   #content {
     overflow: auto;
-    width: auto;
+    width: 100%;
     padding: 4px;
   }
 }

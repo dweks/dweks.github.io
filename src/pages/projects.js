@@ -1,7 +1,7 @@
 import Card from "../card";
 import { motion } from "framer-motion";
 
-const cardType = "card card-h";
+
 
 const Projects = (props) => {
   return (
@@ -12,9 +12,9 @@ const Projects = (props) => {
       transition={{ duration: 0.2 }}
     >
       {Object.keys(props.text).map((entry) => {
-        if (entry === "overview") {
+        if (entry === "intro") {
           return (
-            <p key={entry} className="overview">
+            <p key={entry} className="intro">
               {props.text[entry]}
             </p>
           );
@@ -22,7 +22,7 @@ const Projects = (props) => {
         return (
           <Card
             key={props.text[entry].name}
-            class={cardType}
+            class={"card card-h"}
             target={props.text[entry].name}
             one={<></>}
             two={

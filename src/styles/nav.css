@@ -25,17 +25,17 @@
 }
 
 .nav-link {
-  width: 88%;
   font-family: "bahn";
   font-size: 16pt;
-  font-weight: 100;
+  font-weight: 300;
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--gray1);
+  width: 88%;
   margin-bottom: 10px;
   padding-left: 15px;
   padding-top: 6px;
   padding-bottom: 4px;
+  color: var(--gray1);
   border-radius: 9px;
 
   /* Color fade in/out */
@@ -99,7 +99,7 @@
 
     width: 100%;
     padding: 8px;
-    height:60px;
+    height: 55px;
 
     background-color: var(--page-bg);
     background-image: var(--nav-bg-sm);
@@ -112,7 +112,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 9px 8px 8px 8px;
+    padding: 12px 8px 12px 8px;
     margin: 0;
     border-radius: 8px;
     font-size: 3.5vw;
