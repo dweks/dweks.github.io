@@ -4,11 +4,22 @@
 @import "util.css";
 @import "pages.css";
 
+:root {
+  --page-end: #363331;
+  --page-bg: #21201f;
+  --page-bg2: #1d1c1b;
+  --page-bg3: #242221;
+  --home: #bfb2ac;
+  --home-sub: rgb(204, 194, 190);
+  --sep: #5e524f;
+
+  --top-row-height: 80px;
+}
+
 body {
   display: flex;
   justify-content: center;
   background-color: var(--page-bg);
-  /* background-image: linear-gradient(#211f1e, var(--page-bg)); */
   color: var(--white);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0 auto;
@@ -46,18 +57,19 @@ p {
 
 #home-lg {
   display: flex;
-  flex-direction:column;
-  color: var(--home);
+  flex-direction: column;
+  justify-content: center;
   display: flex;
   width: 100%;
   height: var(--top-row-height);
   padding-left: 20px;
 }
 
-#home-lg h1 {
+#home-lg h3 {
+  color: var(--home);
   font-size: 20pt;
   font-weight: 200;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 #home-lg h6 {
@@ -73,7 +85,7 @@ p {
 
 #home-lg img,
 #home-sm img {
-  display:none;
+  display: none;
   margin-right: 10px;
 }
 

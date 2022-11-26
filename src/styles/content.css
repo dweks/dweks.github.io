@@ -1,3 +1,15 @@
+:root {
+  --scrollbar: #4a443f;
+  --content-header: #b6b1af;
+  --content-bg: #292827;
+  --content-bg2: #272525;
+  --content-bg-grad: linear-gradient(
+    135deg,
+    var(--content-bg),
+    var(--page-bg3)
+  );
+}
+
 #sep {
   position: absolute;
   width: 4px;
@@ -34,8 +46,7 @@
   color: var(--content-header);
   display: flex;
   align-items: center;
-  font-size: 22pt;
-  height: var(--top-row-height);
+  min-height: var(--top-row-height);
   width: 100%;
   padding-left: 22px;
   z-index: 3;
@@ -81,7 +92,7 @@
 
   /* Firefox scrollbar styling: */
   scrollbar-width: 12px;
-  scrollbar-color: var(--sb) var(--content-bg);
+  scrollbar-color: var(--scrollbar) var(--content-bg);
 }
 
 #content::-webkit-scrollbar {
@@ -90,10 +101,14 @@
 }
 
 #content::-webkit-scrollbar-thumb {
-  background-color: var(--sb);
+  background-color: var(--scrollbar);
   border-radius: 22px;
   border: 6px solid var(--content-bg2);
   background-clip: padding-box;
+}
+
+#content-header h2 {
+  font-size: 22pt;
 }
 
 @media screen and (max-width: 675px) {

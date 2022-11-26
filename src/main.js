@@ -5,6 +5,7 @@ import Experience from "./pages/experience";
 import About from "./pages/about";
 import Contact from "./pages/contact";
 import Projects from "./pages/projects";
+import Skills from "./pages/skills";
 import "./styles/main.css";
 import logoSmall from "./images/logo.png";
 import { motion } from "framer-motion";
@@ -38,7 +39,7 @@ function Home(props) {
   return (
     <div id={props.id}>
       <img src={logoSmall} alt="Thumbnail of Blake Stephens" width="45px" />
-      <h1 role="portfolio owner">{text.myname}</h1>
+      <h3 role="portfolio owner">{text.myname}</h3>
       <h6>{text.subtitle}</h6>
     </div>
   );
@@ -57,14 +58,14 @@ function ContentHeader() {
               key={entry}
               path={"/" + entry}
               element={
-                <motion.p
-                  key={entry + " motion"}
+                <motion.h2
+                  key={entry}
                   initial={{ opacity: 0, y: -40 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
                 >
                   {entry}
-                </motion.p>
+                </motion.h2>
               }
             />
           );
@@ -89,7 +90,7 @@ function Content() {
           />
           <Route
             path={"/skills"}
-            element={<Contact text={contactPageText} />}
+            element={<Skills text={skillsPageText} />}
           />
           <Route
             path={"/projects"}
@@ -139,23 +140,19 @@ function Nav() {
   );
 }
 
+function getSubnav(text) {
+  return Object.keys(text).map((item) => {
+      return text[item].title;
+  }).filter((item) => {
+    return item !== undefined;
+  });
+}
+
 const subnavs = {
-  about: Object.keys(aboutPageText).map((item) => {
-    if (item !== "intro") {
-      return aboutPageText[item].header;
-    }
-  }),
-  experience: Object.keys(experiencePageText).map((item) => {
-    if (item !== "intro") {
-      return experiencePageText[item].header;
-    }
-  }),
-  projects: Object.keys(projectsPageText).map((item) => {
-    if (item !== "intro") {
-      return projectsPageText[item].name;
-    }
-  }),
-  skills: ["skillsy"],
+  about: getSubnav(aboutPageText),
+  experience: getSubnav(experiencePageText),
+  skills: getSubnav(skillsPageText),
+  projects: getSubnav(projectsPageText),
   contact: ["contacty"],
 };
 

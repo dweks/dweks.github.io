@@ -1,3 +1,16 @@
+:root {
+  --nav-act: #c48166;
+  --nav-hover-fg: #cd8e80;
+  --nav-end: #2c2a28;
+  --nav-bg-sm: linear-gradient(var(--content-bg), #222120);
+  --nav-bg: linear-gradient(
+    200deg,
+    var(--content-bg2),
+    var(--content-bg2),
+    var(--page-bg)
+  );
+}
+
 #nav-end {
   position: relative;
   background-color: var(--nav-end);
@@ -46,7 +59,7 @@
 }
 
 .nav-link:hover {
-  color: var(--red4);
+  color: var(--nav-hover-fg);
   background-color: var(--page-bg);
 }
 
@@ -75,7 +88,7 @@
 }
 
 .subnav a:hover {
-  color: var(--red4);
+  color: var(--nav-hover-fg);
 }
 
 @media screen and (max-width: 675px) {
@@ -116,10 +129,5 @@
     margin: 0;
     border-radius: 8px;
     font-size: 3.5vw;
-  }
-
-  .nav-link-act {
-    color: var(--red);
-    background-color: var(--page-bg);
   }
 }

@@ -20,29 +20,29 @@ const About = (props) => {
         two={
           <>
             <h1>{props.text.intro.greeting}</h1>
-            <p className="card-desc">{props.text.intro.desc}</p>
+            <p>{props.text.intro.desc}</p>
           </>
         }
       />
       <Card
-        key={props.text.bio1.header}
+        key={props.text.bio1.title}
         class={"card-single"}
-        target={props.text.bio1.header}
+        target={props.text.bio1.title}
         single={
           <>
-            <h2>{props.text.bio1.header}</h2>
-            <p className="card-desc">{props.text.bio1.desc}</p>
+            <h2>{props.text.bio1.title}</h2>
+            <p>{props.text.bio1.desc}</p>
           </>
         }
       />
       <Card
-        key={props.text.bio2.header}
+        key={props.text.bio2.title}
         class={"card-single"}
-        target={props.text.bio2.header}
+        target={props.text.bio2.title}
         single={
           <>
-            <h2>{props.text.bio2.header}</h2>
-            <p className="card-desc">{props.text.bio2.desc}</p>
+            <h2>{props.text.bio2.title}</h2>
+            <p>{props.text.bio2.desc}</p>
           </>
         }
       />

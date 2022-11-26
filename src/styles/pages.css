@@ -4,6 +4,12 @@
   margin-left: 10px;
 }
 
+@media screen and (max-width: 1020px) {
+  .intro {
+    margin: 10px;
+  }
+}
+
 /* Experience */
 
 .exp-one {
@@ -23,16 +29,13 @@
 }
 
 @media screen and (max-width: 1020px) {
-  .overview {
-    margin: 10px;
-  }
   .exp-one{
     flex-direction: column;
     align-self: flex-start;
-    margin-left: 0;
   }
-  .exp-one p {
-    align-self: flex-start;
+
+  .exp-one h3 {
+    margin: 0;
   }
 }
 
@@ -40,4 +43,36 @@
 
 .card img {
   border-radius: 14px;
+}
+
+/* Projects */
+
+.proj-one {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
+.proj-one .headers {
+  width: 100%;
+}
+
+.proj-one .flink {
+  display: flex;
+  justify-self: flex-end;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+@media screen and (max-width: 775px) {
+  .proj-one{
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .proj-one .flink {
+    margin-top: 5px;
+    justify-self: flex-start;
+    justify-content: flex-start;
+  }
 }

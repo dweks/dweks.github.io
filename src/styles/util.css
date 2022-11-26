@@ -1,56 +1,59 @@
+* {
+  color: var(--white);
+}
+
 @font-face {
   font-family: "bahn";
   src: url(BAHNSCHRIFT.TTF);
 }
 
 :root {
-  --white: rgb(210, 210, 210);
+  --white: rgb(220, 220, 220);
   --gray: rgb(200, 200, 200);
   --gray1: rgb(190, 190, 190);
   --gray2: rgb(140, 140, 140);
   --gray3: rgb(110, 110, 110);
   --gray4: rgb(80, 80, 80);
-  --red: #ba7768;
-  --red5: #955f52;
-  --red4: #cd8e80;
-  --red1: #ab8c85;
-  --red2: #786966;
-  --red3: #baa29c;
+  --orange: #bd906c;
+  --a: #baa987;
 
-  --nav-act: #c48166;
-  --content-header: #b6b1af;
-  --home: #bfb2ac;
-  --home-sub: #867972;
-  --card-header: #b39379;
-  --sep: #5e524f;
-  --sb: #4a443f;
-  --card-top: rgb(46, 44, 44);
-  --card-bot: #333232;
-  --page-end:#363331;
-  --nav-end:#2c2a28;
-  --card-single: #2b2928;
+  --bullet: #97665a;
+}
 
-  --page-bg: #21201f;
-  --page-bg2: #1d1c1b;
-  --page-bg3: #242221;
-  --content-bg: #292827;
-  --content-bg2: #272525;
-  --card-bg2: #2e2c2c;
-  --nav-bg: linear-gradient(
-    200deg,
-    var(--content-bg2),
-    var(--content-bg2),
-    var(--page-bg)
-  );
-  --content-bg-grad: linear-gradient(
-    135deg,
-    var(--content-bg),
-    var(--page-bg3)
-  );
-  --nav-bg-sm: linear-gradient(var(--content-bg), #222120);
-  --header-bg: linear-gradient(180deg, #267524, var(--page-bg));
+.flink-icon {
+  box-sizing: border-box;
+  width: 15px;
+  height: 15px;
+  margin-top: 4px;
+  margin-right: 5px;
+}
 
-  --top-row-height: 80px;
+.flink {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  width: auto;
+  height: auto;
+}
+
+a {
+  color: var(--a);
+  font-weight: 300;
+  text-decoration-color: var(--gray3);
+  text-decoration-thickness: 1px;
+}
+
+p {
+  font-size: larger;
+  margin-top: 0;
+  padding-top: 5px;
+}
+
+h1 {
+  color: var(--orange);
+  font-weight: 100;
+  font-size: 24pt;
+  margin: 0px 0px 2px 0px;
 }
 
 h2 {
@@ -58,6 +61,33 @@ h2 {
   margin: 0;
   font-weight: 300;
   font-size: 20pt;
+}
+
+h3 {
+  color: var(--gray);
+  font-weight: 300;
+  font-size: 13pt;
+}
+
+h4 {
+  color: var(--gray1);
+  font-weight: 500;
+  font-size: 12pt;
+  margin: 0px 0px 2px 0px;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "\2022";
+  color: var(--bullet);
+  display: inline-block;
+  font-weight: bold;
+  font-size:larger;
+  width: 1.1em;
+  margin-left: -1.1em;
 }
 
 .bahn {

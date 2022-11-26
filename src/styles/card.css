@@ -1,3 +1,10 @@
+:root {
+  --card-top: rgb(46, 44, 44);
+  --card-bot: #333232;
+  --card-single: #2b2928;
+  --card-bg2: #2e2c2c;
+}
+
 .card {
   margin-bottom: 15px;
   word-wrap: break-word;
@@ -25,11 +32,12 @@
 
 .card-h .card-1 {
   background-color: var(--card-top);
-  padding: 12px;
+  padding: 10px;
   border-radius: 16px 0px 0px 16px;
 }
 
 .card-h .card-2 {
+  width: 100%;
   background-color: var(--card-bot);
   padding: 5px 15px 13px 15px;
   border-radius: 0px 15px 8px 0px;
@@ -51,42 +59,6 @@
   border-radius: 0px 0px 8px 8px;
 }
 
-.card h1 {
-  color: var(--card-header);
-  font-weight: 100;
-  font-size: 24pt;
-  margin: 0px 0px 2px 0px;
-}
-
-.card h4 {
-  color: var(--gray1);
-  font-weight: 500;
-  font-size: 12pt;
-  margin: 0px 0px 2px 0px;
-}
-
-.card-desc {
-  font-size: larger;
-  margin-top: 0;
-  padding-top: 5px;
-}
-
-.card ul {
-  list-style: none;
-  list-style-position: outside;
-}
-
-.card ul li::before {
-  content: "\2022";
-  font-size: 1.2em;
-  color: var(--red1);
-  display: inline-block;
-  font-weight: bold;
-  width: 1.1em;
-  margin-top: -0.3em;
-  margin-left: -1.5em;
-  overflow-wrap: break-word;
-}
 
 @media screen and (max-width: 675px) {
   .card-v .card-1 {
@@ -95,12 +67,11 @@
   .card-1 p {
     text-align: left;
   }
-
 }
 
 @media screen and (max-width: 1000px) {
   .card-h {
-    flex-direction:column;
+    flex-direction: column;
   }
 
   .card-h .card-1 {
@@ -108,11 +79,11 @@
   }
 
   .card-h .card-2 {
+    width: auto;
     border-radius: 0 0 10px 10px;
   }
 
   .card-h img {
     width: 100%;
   }
-
 }

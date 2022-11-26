@@ -1,13 +1,13 @@
-import { motion } from "framer-motion";
 import Card from "../card";
+import { motion } from "framer-motion";
 
-const Experience = (props) => {
+const Skills = (props) => {
   return (
     <motion.div
       role="animation"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.2 }}
     >
       {Object.keys(props.text).map((entry) => {
         if (entry === "intro") {
@@ -22,31 +22,17 @@ const Experience = (props) => {
             key={props.text[entry].title}
             class={"card card-v"}
             target={props.text[entry].title}
-            one={
-              <div className="exp-one">
-                <div className="headers">
-                  <h1>{props.text[entry].title}</h1>
-                  <h4>{props.text[entry].subtitle}</h4>
-                </div>
-                <h3>{props.text[entry].date}</h3>
-              </div>
-            }
+            one={<div className="skill-one"></div>}
             two={
               <>
                 <p>{props.text[entry].desc}</p>
-                <ul role="listing experience">
-                  {props.text[entry].list.map((item) => {
-                    return <li key={item}>{item}</li>;
-                  })}
-                </ul>
               </>
             }
           />
         );
       })}
-      <div className="page-end" role="aesthetics" />
     </motion.div>
   );
 };
 
-export default Experience;
+export default Skills;
