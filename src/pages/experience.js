@@ -19,16 +19,16 @@ const Experience = (props) => {
         }
         return (
           <Card
-            key={props.text[entry].title}
+            key={props.text[entry].header}
             class={"card card-v"}
-            target={props.text[entry].title}
+            target={props.text[entry].header}
             one={
               <div className="exp-one">
                 <div className="headers">
-                  <h1>{props.text[entry].title}</h1>
-                  <h4>{props.text[entry].subtitle}</h4>
+                  <h1>{props.text[entry].header}</h1>
+                  <p2>{props.text[entry].subheader}</p2>
                 </div>
-                <h3>{props.text[entry].date}</h3>
+                <p3>{props.text[entry].date}</p3>
               </div>
             }
             two={
@@ -36,7 +36,7 @@ const Experience = (props) => {
                 <p>{props.text[entry].desc}</p>
                 <ul role="listing experience">
                   {props.text[entry].list.map((item) => {
-                    return <li key={item}>{item}</li>;
+                    return <li key={item} role="experience list item">{item}</li>;
                   })}
                 </ul>
               </>

@@ -1,6 +1,9 @@
 :root {
   --nav-act: #c48166;
-  --nav-hover-fg: #cd8e80;
+  --nav-hover-fg: #c48166;
+  --nav-link-act-bg: var(--page-bg);
+  --nav-link-hover-bg: var(--page-bg);
+  --subnav-hover-fg: #dd977b;
   --nav-end: #2c2a28;
   --nav-bg-sm: linear-gradient(var(--content-bg), #222120);
   --nav-bg: linear-gradient(
@@ -24,12 +27,11 @@
 }
 
 #nav {
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   background-image: var(--nav-bg);
 
-  padding-top: 20px;
+  padding-top: 10px;
   padding-left: 8px;
   padding-bottom: 25px;
   border-radius: 25px 7px 7px 5px;
@@ -43,13 +45,11 @@
   font-weight: 300;
   text-decoration: none;
   text-transform: uppercase;
-  width: 88%;
-  margin-bottom: 10px;
-  padding-left: 15px;
-  padding-top: 6px;
-  padding-bottom: 4px;
+  width: 95%;
+  margin-bottom: 8px;
+  padding: 6px 0 4px 15px;
   color: var(--gray1);
-  border-radius: 9px;
+  border-radius: 14px 9px 9px 9px;
 
   /* Color fade in/out */
   transition: color 0.1s ease-in, background-color 0.1s ease-in;
@@ -60,24 +60,25 @@
 
 .nav-link:hover {
   color: var(--nav-hover-fg);
-  background-color: var(--page-bg);
+  background-color: var(--nav-link-hover-bg);
 }
 
 .nav-link-act {
   color: var(--nav-act);
-  background-color: var(--page-bg);
+  background-color: var(--nav-link-act-bg);
 }
 
 .subnav {
   display: flex;
   flex-direction: column;
-  margin-left: 35px;
+  justify-content: flex-end;
+  margin-left: 25px;
 }
 
 .subnav a {
   text-decoration: none;
   font-weight: 300;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: var(--gray);
 
   /* Color fade in/out */
@@ -88,10 +89,10 @@
 }
 
 .subnav a:hover {
-  color: var(--nav-hover-fg);
+  color: var(--subnav-hover-fg);
 }
 
-@media screen and (max-width: 675px) {
+@media screen and (max-width: 600px) {
   #nav-end {
     display: none;
   }
@@ -117,8 +118,8 @@
     background-color: var(--page-bg);
     background-image: var(--nav-bg-sm);
 
-    border-radius: 9px;
-    box-shadow: 0px 10px 20px 0px var(--page-bg);
+    border-radius: 0px;
+    box-shadow: 0px 10px 12px -4px var(--page-bg);
   }
 
   .nav-link {

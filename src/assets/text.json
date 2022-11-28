@@ -4,27 +4,57 @@
   "pages": {
     "about": {
       "intro": {
-        "greeting": "Hello, I'm Blake.",
-        "desc": "Here is an intro of me Here is an intro of me Here is an intro of me Here is an intro of me Here is an intro of me Here is an intro of me Here is an intro of me "
+        "greeting": "Hey, I'm Blake.",
+        "desc": "I'm a software developer and an enthusiast of computer science and programming. I'm nearly graduated with my Bachelor's degree in Computer Science and itching to put my training to use in the software industry."
       },
       "bio1": {
-        "title": "Education",
-        "desc": "Here is my education history."
+        "header": "Education",
+        "desc": "I have spent the past six years finishing my Associate's Degree and getting my Bachelor's in Computer Science. The courses for my major introduced me to the fundamentals of a broad range of computer science principles.",
+        "subheader1": "Degrees",
+        "degree1": {
+          "header": "Bachelor of Science in Computer Science",
+          "date": "September 2018 to December 2022",
+          "gpa": "Major GPA: 3.57"
+        },
+        "degree2": {
+          "header": "Associate Degree in General Studies",
+          "date": "September 2016 to September 2018"
+        },
+        "subheader2": "Courses",
+        "courses": [
+          "CS 163: Data Structures",
+          "CS 201: Computer Systems Programming",
+          "CS 202: Programming Methodologies and Software Implementation",
+          "CS 300: Elements of Software Engineering",
+          "CS 320: Principles of Programming Languages",
+          "CS 333: Operating Systems",
+          "CS 350: Algorithms and Complexity",
+          "CS 486: Database Management Systems",
+          "CS 311: Computational Structures",
+          "CS 410: Programming in Rust",
+          "CS 410: Web Development",
+          "CS 410: Code Reading & Review",
+          "CS 410: Exploring Fractals",
+          "CS 491: Computer Security",
+          "MTH 261: Intro to Linear Algebra",
+          "MTH 356: Discrete Mathematics"
+        ]
       },
       "bio2": {
-        "title": "Interests",
-        "desc": "Here is a description of my interests"
+        "header": "Otherwise",
+        "desc1": "Outside of computers and programming I like to be in the outdoors. It can be a solo adventure to a new fishing spot, a few friends on a camping trip or boogie boarding in the freezing Pacific ocean-- and I'll be happy.",
+        "desc2": "At home, if I'm not working on coding projects I like to read, draw, or build. Generally I prefer to spend my time either making something or moving around."
       }
     },
 
     "experience": {
-      "intro": "During my education I've pursued a variety of experiences ranging from...",
+      "intro": "My work and programming experience includes code collaboration with peers, designing and building computer science course material and troubleshooting Linux infrastructure.\r",
 
       "exp1": {
-        "title": "Lab Facilitator",
-        "subtitle": "Portland State University",
+        "header": "Lab Facilitator",
+        "subheader": "Portland State University",
         "date": "September 2021 to December 2022",
-        "desc": "description",
+        "desc": "My general responsibilities were to present short lectures on data structures to lower-level computer science students and be available during labs to help debug or answer conceptual questions.",
         "list": [
           "Presenting and explaining data structure concepts to groups of students in labs",
           "Guiding individual students to solutions for programming problems using C++",
@@ -36,10 +66,10 @@
       },
 
       "exp2": {
-        "title": "Front-end Developer",
-        "subtitle": "PSU: Capstone Project",
+        "header": "Front-end Developer",
+        "subheader": "PSU: Capstone Project",
         "date": "March 2022 to September 2022",
-        "desc": "description",
+        "desc": "My participation in the Capstone project got me introduced to git workflows, front-end technologies and frameworks, and the beauty of collaboration.",
         "list": [
           "Developing an interactive web application using Node.js and React.js with TypeScript",
           "Data modeling for a graph data structure implemented with an MVC architecture",
@@ -50,10 +80,10 @@
       },
 
       "exp3": {
-        "title": "IT Help Desk Volunteer",
-        "subtitle": "Portland State University",
+        "header": "IT Help Desk Volunteer",
+        "subheader": "Portland State University",
         "date": "October 2020 to May 2021",
-        "desc": "description",
+        "desc": "As a member of The Computer Action Team -the organization responsible for the technical infrastructure of Maseeh College of Engineering and Computer Science- I learned how to navigate and interact with a Linux environment to solve problems.",
         "list": [
           "Working directly with MCECS students and faculty for IT troubleshooting",
           "Collaborating on revisions to technical documentation and website content",
@@ -64,47 +94,82 @@
     },
 
     "skills": {
-      "intro": "INTRO",
+      "intro": "Most of the skills listed below come from my education and work experience, but some are an effect of exploring extracurricular projects.",
       "skill1": {
-        "title": "Languages"
+        "header": "Language",
+        "desc": "C, C++, Python, Java, HTML, CSS, TypeScript/JavaScript, Bash Script, Rust, SQL"
       },
 
       "skill2": {
-        "title": "Technology"
+        "header": "Technology",
+        "desc": "Linux, Git, GDB, SQLite, PostreSQL, JSON, Regex"
       },
 
       "skill3": {
-        "title": "Libraries/Frameworks"
+        "header": "Libraries/Frameworks",
+        "desc": "C++ STL, ReactJS, NodeJS, Bootstrap, jQuery/AJAX"
+      },
+
+      "skill4": {
+        "header": "IDEs/Editors",
+        "desc": "Vim, VS Code, IntelliJ IDEA, PyCharm"
+      },
+
+      "skill5": {
+        "header": "Design",
+        "desc": "Photoshop"
       }
     },
 
     "projects": {
-      "intro": "Below are the coding projects I've worked on. Most of them are personal projects of varying sizes...",
+      "intro": "Some of the below are assignments from coursework, others are personal projects. I tend to take on personal projects to gain familiarity with languages or libraries while solving some kind of problem.",
       "proj1": {
-        "title": "Isle of Trust",
-        "language": "TypeScript",
-        "desc": "A web application for visualizing the effects of an individual's influence in a complex environment of personalities.",
+        "header": "Isle of Trust",
+        "language": "ReactJS with TypeScript",
         "sourcename": "GitLab",
-        "url": "https://gitlab.cecs.pdx.edu/prisoners-dilemma/site"
+        "url": "https://gitlab.cecs.pdx.edu/prisoners-dilemma/site",
+        "desc1": "An SPA web application for visualizing the effects of an individual's influence in a complex environment of personalities.",
+        "desc2": "The project was built with ReactJS on NodeJS. For graphics and animation we used the Konva.js library. We used an MVC architecture to organize our data structure interactions. Our development strategy was to use CI/CD where we each took on different development roles.",
+        "desc3": "My contribution included implementation of a weighted, directed graph interface, modeling other data structures, animation rendering, and of course, debugging any component of the application I could."
       },
 
       "proj2": {
-        "title": "qnot",
-        "language": "python",
-        "desc": "A command-based note-taking utility designed for people who spend a lot of time in a terminal.",
+        "header": "qnot",
+        "language": "python with SQLite",
+        "desc1": "A command-based note-taking utility designed for people who spend a lot of time in a terminal.",
+        "desc2": "With qnot the user can quickly add a tagged note to a local SQLite database, straight from the command line without opening an interface.",
+        "desc3": "Notes can also be created and edited with the user's default text editor. Tagging notes is built in to the note-taking itself by allowing a '+' to be put before nearly a word to turn it into a tag. Viewing and managing notes can be done via command line arguments and will open an interactive, command-based environment.",
         "sourcename": "GitHub",
         "url": "https://github.com/sqthreer/qnot"
       },
 
       "proj3": {
-        "title": "solitaire",
+        "header": "solitaire",
         "language": "Java",
-        "desc": "A text-based game of solitaire; playable in a command-line.",
+        "desc1": "A text-based game of solitaire; playable in a command-line.",
         "sourcename": "GitHub",
         "url": "https://github.com/sqthreer/solitaire"
+      },
+
+      "proj4": {
+        "header": "Dev Portfolio",
+        "language": "ReactJS with JavaScript",
+        "desc1": "The site you're on now! This began as a project for a web development class but has continued on as a portfolio.",
+        "sourcename": "GitHub",
+        "url": "https://github.com/sqthreer/sqthreer.github.io"
       }
     },
 
-    "contact": {}
+    "contact": {
+      "header": "Send me a message",
+      "desc": "If you'd like to start up a conversation, please fill in the form below or visit my profiles on LinkedIn or GitHub. Note: clicking 'Send' will open your email client.",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "gh": "GitHub",
+      "li": "LinkedIn",
+      "ghurl": "https://github.com/sqthreer",
+      "liurl": "https://www.linkedin.com/in/blake-stephens-01bb5a42/"
+    }
   }
 }

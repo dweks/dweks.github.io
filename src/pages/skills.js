@@ -19,10 +19,14 @@ const Skills = (props) => {
         }
         return (
           <Card
-            key={props.text[entry].title}
+            key={props.text[entry].header}
             class={"card card-v"}
-            target={props.text[entry].title}
-            one={<div className="skill-one"></div>}
+            target={props.text[entry].header}
+            one={
+              <div className="skill-one">
+                <h1>{props.text[entry].header}</h1>
+              </div>
+            }
             two={
               <>
                 <p>{props.text[entry].desc}</p>
@@ -31,6 +35,7 @@ const Skills = (props) => {
           />
         );
       })}
+      <div className="page-end" role="aesthetics" />
     </motion.div>
   );
 };

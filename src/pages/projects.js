@@ -20,14 +20,14 @@ const Projects = (props) => {
         }
         return (
           <Card
-            key={props.text[entry].title}
+            key={props.text[entry].header}
             class={"card card-v"}
-            target={props.text[entry].title}
+            target={props.text[entry].header}
             one={
-              <div className="proj-one" role="contain card subsection">
+              <div className="proj-one">
                 <div className="headers">
-                  <h1>{props.text[entry].title}</h1>
-                  <h4>{props.text[entry].language}</h4>
+                  <h1>{props.text[entry].header}</h1>
+                  <p2>{props.text[entry].language}</p2>
                 </div>
                 <div className="flink" role="contain foreign link">
                   <img
@@ -40,19 +40,22 @@ const Projects = (props) => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Source on {props.text[entry].sourcename}
+                    {props.text[entry].sourcename}
                   </a>
                 </div>
               </div>
             }
             two={
               <>
-                <p>{props.text[entry].desc}</p>
+                <p>{props.text[entry].desc1}</p>
+                <p>{props.text[entry].desc2}</p>
+                <p>{props.text[entry].desc3}</p>
               </>
             }
           />
         );
       })}
+      <div className="page-end" role="aesthetics" />
     </motion.div>
   );
 };

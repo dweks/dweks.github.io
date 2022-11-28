@@ -20,15 +20,6 @@
   background-color: var(--sep);
 }
 
-#sep-sm {
-  display: none;
-  width: 4px;
-  height: 48px;
-  border-radius: 8px;
-  z-index: 2;
-  background-color: var(--sep);
-}
-
 .page-end {
   position: relative;
   background-color: var(--page-end);
@@ -42,41 +33,21 @@
 }
 
 #content-header {
-  box-sizing: border-box;
-  color: var(--content-header);
   display: flex;
   align-items: center;
   min-height: var(--top-row-height);
-  width: 100%;
   padding-left: 22px;
   z-index: 3;
+}
+
+#content-header h1 {
+  color: var(--content-header);
+  margin: 0;
+  font-family: "bahn";
   text-transform: uppercase;
 }
 
-#shadow-top {
-  display: none;
-  position: relative;
-  margin-bottom: -15px;
-  width: 99%;
-  height: 10px;
-  z-index: 2;
-  box-shadow: inset 0px 10px 8px -8px var(--content-bg);
-  border-radius: 7px 15px 0px 0px;
-}
-
-#shadow-bottom {
-  display: none;
-  position: relative;
-  margin-top: -10px;
-  width: 100%;
-  height: 10px;
-  z-index: 2;
-  box-shadow: inset 0px -10px 8px -8px var(--content-bg);
-  border-radius: 0px 0px 15px 15px;
-}
-
 #content {
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
@@ -111,12 +82,8 @@
   font-size: 22pt;
 }
 
-@media screen and (max-width: 675px) {
+@media screen and (max-width: 600px) {
   #content-header {
-    display: none;
-  }
-
-  #sep-sm {
     display: none;
   }
 

@@ -12,7 +12,6 @@
   --home: #bfb2ac;
   --home-sub: rgb(204, 194, 190);
   --sep: #5e524f;
-
   --top-row-height: 80px;
 }
 
@@ -25,25 +24,18 @@ body {
   margin: 0 auto;
 }
 
-p {
-  font-size: larger;
-  font-weight: 300;
-}
-
 #main {
-  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   max-height: 99vh;
 }
 
 #main-one {
-  width: 225px;
+  width: 220px;
   display: flex;
   flex-direction: column;
   justify-items: center;
   margin-right: 8px;
-  /* background-color: red; */
 }
 
 #main-two {
@@ -52,48 +44,39 @@ p {
   width: 55vw;
   max-width: 700px;
   max-height: 100%;
-  /* background-color: blue; */
 }
 
 #home-lg {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
   display: flex;
   width: 100%;
   height: var(--top-row-height);
-  padding-left: 20px;
+  min-height: var(--top-row-height);
 }
 
-#home-lg h3 {
+#home-lg img {
+  margin-top: 5px;
+}
+
+#home-lg h2 {
   color: var(--home);
-  font-size: 20pt;
+  font-size: 18pt;
   font-weight: 200;
   margin: 0;
 }
 
-#home-lg h6 {
+#home-lg h3 {
   margin: 0;
-  font-size: 10pt;
+  margin-top: -2px;
+  font-size: 9pt;
   font-weight: 500;
   color: var(--home-sub);
 }
 
-#home-sm {
-  display: none;
-}
-
-#home-lg img,
-#home-sm img {
-  display: none;
-  margin-right: 10px;
-}
-
-@media screen and (max-width: 675px) {
-  body {
-    display: inline-block;
-  }
-
+@media screen and (max-width: 600px) {
   #main {
     flex-direction: column;
     width: 100vw;
