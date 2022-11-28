@@ -4,6 +4,10 @@
 This website was built using [ReactJS](https://create-react-app.dev/docs/getting-started) on
  [NodeJS](https://nodejs.org/en/) and deployed using [gh-pages](https://www.npmjs.com/package/gh-pages) to [sqthreer.github.io](https://sqthreer.github.io/about).
  See below for a list of all libraries and dependencies used.
+ 
+ The layout on a standard larger screen width (at least 600 pixels) has vertical navigation bar on the left. Each navigation link may have subnavigation links that animate into view below it. These subnavigation links are to points on the currently viewed page. On smaller screen widths (less than 600pixels) the site responds by switching to a horizontal navigation above the page content and hiding the logo, site name and page headers.
+
+ Site content is rendered in an independently scrolling container, and quickly fades into view as its content is loaded. Most content is organized into 'cards' with a header, subheader and description. The end of each page is marked by a short, rouned line.
 
 ## How to install and run the code:
 
