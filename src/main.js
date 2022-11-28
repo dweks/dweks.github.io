@@ -49,7 +49,7 @@ function Home(props) {
         height="50px"
       />
       <div>
-        <h2 role="portfolio owner">{text.myname}</h2>
+        <h2>{text.myname}</h2>
         <h3>{text.subtitle}</h3>
       </div>
     </div>
@@ -60,7 +60,7 @@ function Home(props) {
 function ContentHeader() {
   return (
     <header id="content-header">
-      <div id="sep" role="aesthetic" />
+      <div aria-hidden="true" id="sep" />
       <Routes>
         <Route exact path="/" element={<Navigate to="/about" />} />
         {Object.keys(pageTitles).map((entry) => {
@@ -111,7 +111,7 @@ function Content() {
 // Main navigation; vertical at higher screen widths, horizontal at lower
 function Nav() {
   return (
-    <nav id="nav">
+    <nav aria-label="Main site navigation" id="nav">
       {Object.keys(pageTitles).map((page) => {
         if (page === "contact") {
           return (
@@ -149,7 +149,7 @@ function Nav() {
         );
       })}
 
-      <div id="nav-end" role="aesthetics" />
+      <div aria-hidden="true" id="nav-end" />
     </nav>
   );
 }
@@ -178,12 +178,14 @@ function SubNav(props) {
       initial={{ opacity: 0, height: 0 }}
       animate={{ opacity: 1, height: "auto" }}
       transition={{ duration: 0.2 }}
+      aria-label="subnavigation"
     >
       {subnavs[props.page].map((item) => {
         return (
           <HashLink
             key={item + " subnav link"}
             to={"/" + props.page + "#" + item}
+            aria-label="subnavigation link"
           >
             {item}
           </HashLink>

@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 const Projects = (props) => {
   return (
     <motion.div
-      role="animation"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.4 }}
@@ -29,11 +28,12 @@ const Projects = (props) => {
                   <h1>{props.text[entry].header}</h1>
                   <p2>{props.text[entry].language}</p2>
                 </div>
-                <div className="flink" role="contain foreign link">
+                <div className="flink">
                   <img
                     className="flink-icon"
                     src={flink}
                     alt="foreign link icon"
+                    aria-hidden="true"
                   />
                   <a
                     href={props.text[entry].url}
@@ -55,7 +55,7 @@ const Projects = (props) => {
           />
         );
       })}
-      <div className="page-end" role="aesthetics" />
+      <div aria-hidden="true" className="page-end" />
     </motion.div>
   );
 };

@@ -5,7 +5,6 @@ import profilePic from "../images/me.png";
 const About = (props) => {
   return (
     <motion.div
-      role="animation"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.4 }}
@@ -18,7 +17,7 @@ const About = (props) => {
           <>
             <img
               src={profilePic}
-              alt="Picture of Blake Stephens"
+              alt="Picture of Blake Stephens; the Author of the website."
               width="200px"
             />
           </>
@@ -26,7 +25,7 @@ const About = (props) => {
         two={
           <>
             <h1>{props.text.intro.greeting}</h1>
-            <p role="introduction">{props.text.intro.desc}</p>
+            <p>{props.text.intro.desc}</p>
           </>
         }
       />
@@ -41,7 +40,7 @@ const About = (props) => {
 
             <h2>{props.text.bio1.subheader1}</h2>
 
-            <div role="indentation" className="indent">
+            <div className="indent">
               <p className="p2">{props.text.bio1.degree1.header}</p>
               <p className="p3">{props.text.bio1.degree1.date}</p>
               <p className="p3">{props.text.bio1.degree1.gpa}</p>
@@ -51,10 +50,10 @@ const About = (props) => {
             </div>
 
             <h2>{props.text.bio1.subheader2}</h2>
-            <ul role="listing courses">
+            <ul>
               {props.text.bio1.courses.map((course) => {
                 return (
-                  <li role="course list item" key={course}>
+                  <li key={course}>
                     {course}
                   </li>
                 );
@@ -75,7 +74,7 @@ const About = (props) => {
           </>
         }
       />
-      <div className="page-end" role="aesthetics" />
+      <div aria-hidden="true" className="page-end" />
     </motion.div>
   );
 };

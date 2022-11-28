@@ -4,7 +4,6 @@ import Card from "../card";
 const Experience = (props) => {
   return (
     <motion.div
-      role="animation"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.4 }}
@@ -34,9 +33,9 @@ const Experience = (props) => {
             two={
               <>
                 <p>{props.text[entry].desc}</p>
-                <ul role="listing experience">
+                <ul>
                   {props.text[entry].list.map((item) => {
-                    return <li key={item} role="experience list item">{item}</li>;
+                    return <li key={item}>{item}</li>;
                   })}
                 </ul>
               </>
@@ -44,7 +43,7 @@ const Experience = (props) => {
           />
         );
       })}
-      <div className="page-end" role="aesthetics" />
+      <div aria-hidden="true" className="page-end" />
     </motion.div>
   );
 };

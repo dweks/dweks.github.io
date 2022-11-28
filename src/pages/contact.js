@@ -6,7 +6,6 @@ import linkedinIcon from "../images/linkedin.png";
 const Contact = (props) => {
   return (
     <motion.div
-      role="animation"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.4 }}
@@ -16,13 +15,14 @@ const Contact = (props) => {
         one={
           <>
             <h1>{props.text.header}</h1>
-            <div className="social" role="contain social links">
+            <div aria-label="Social website links" className="social">
               <div className="social-link">
                 <a href={props.text.ghurl} target="_blank" rel="noreferrer">
                   <img
                     className="social-icon"
                     src={githubIcon}
                     alt="GitHub icon"
+                    aria-hidden="true"
                   />
                   {props.text.gh}
                 </a>
@@ -33,6 +33,7 @@ const Contact = (props) => {
                     className="social-icon"
                     src={linkedinIcon}
                     alt="Linkedin icon"
+                    aria-hidden="true"
                   />
                   {props.text.li}
                 </a>
@@ -47,7 +48,7 @@ const Contact = (props) => {
         method="POST"
         encType="text/plain"
         name="PorfolioContactForm"
-        role="contact form"
+        aria-label="Contact form for visitors"
       >
         <div className="inp">
           <label htmlFor="name">{props.text.name}</label>
@@ -57,6 +58,7 @@ const Contact = (props) => {
             id="name"
             name="name"
             maxLength="40"
+            aria-label="name entry"
           />
         </div>
         <div className="inp">
@@ -67,18 +69,23 @@ const Contact = (props) => {
             id="email"
             name="email"
             maxLength="40"
+            aria-label="email entry"
           />
         </div>
         <div className="inp">
           <label htmlFor="message">{props.text.message}</label>
-          <textarea id="message" name="message"></textarea>
+          <textarea
+            aria-label="message entry"
+            id="message"
+            name="message"
+          ></textarea>
         </div>
-        <div id="buttons">
-          <input type="submit" value="Send" />
-          <input type="reset" value="Reset" />
+        <div aria-label="send and reset form buttons" id="buttons">
+          <input aria-label="opens email client to send message" type="submit" value="Send" />
+          <input aria-label="resets all text entry fields" type="reset" value="Reset" />
         </div>
       </form>
-      <div className="page-end" role="aesthetics" />
+      <div aria-hidden="true" className="page-end" />
     </motion.div>
   );
 };
