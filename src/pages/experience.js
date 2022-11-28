@@ -7,7 +7,7 @@ const Experience = (props) => {
       role="animation"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.4 }}
     >
       {Object.keys(props.text).map((entry) => {
         if (entry === "intro") {
@@ -26,9 +26,9 @@ const Experience = (props) => {
               <div className="exp-one">
                 <div className="headers">
                   <h1>{props.text[entry].header}</h1>
-                  <p2>{props.text[entry].subheader}</p2>
+                  <p className="p2">{props.text[entry].subheader}</p>
                 </div>
-                <p3>{props.text[entry].date}</p3>
+                <p className="p3">{props.text[entry].date}</p>
               </div>
             }
             two={

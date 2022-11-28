@@ -2,6 +2,7 @@
 :root {
   --intro-text: rgb(197, 191, 174);
   --btn-reset: #924f37;
+  --reset-border: #e07261;
   --btn-send: #7e5d3d;
 }
 
@@ -28,15 +29,6 @@
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
-}
-
-.exp-one p {
-  color: var(--gray1);
-  font-weight: 100;
-  font-size: 12pt;
-  margin: 0px 5px 3px 0px;
-  text-align: right;
-  align-self: center;
 }
 
 @media screen and (max-width: 1020px) {
@@ -108,10 +100,10 @@
   justify-items: center;
 }
 
-.social img {
+.social-link img {
   border-radius: 0;
   width: 22px;
-  margin-right: 4px;
+  margin-right: 6px;
 }
 
 .social-link a {
@@ -127,7 +119,6 @@ form {
   justify-content: flex-start;
   align-items: flex-start;
   margin: 20px 4px 0 4px;
-  width: 100%;
   font-size: 18pt;
   font-weight: 300;
 }
@@ -143,7 +134,7 @@ input[type="submit"] {
 input[type="reset"] {
   width: 150px;
   background-color: var(--btn-reset);
-  border-color: var(--orange);
+  border-color: var(--reset-border);
   color: white;
 }
 
@@ -151,7 +142,7 @@ textarea,
 input {
   border-style: solid;
   border-width: 1px;
-  border-color: var(--gray4);
+  border-color: rgb(34, 32, 32);
   background-color: var(--gray5);
   border-radius: 6px;
   margin-bottom: 10px;
@@ -200,6 +191,10 @@ input {
 @media screen and (max-width: 800px) {
   .inp {
     flex-direction: column;
+  }
+
+  .social-link:first-child a {
+    /* padding-left: 0; */
   }
 
   #buttons {

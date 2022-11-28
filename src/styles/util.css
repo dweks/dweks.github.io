@@ -54,6 +54,7 @@ p {
 .p3 {
   padding:0;
   font-size: 12pt;
+  align-self: center;
 }
 
 h1 {

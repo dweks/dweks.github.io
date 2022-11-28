@@ -161,8 +161,8 @@
     },
 
     "contact": {
-      "header": "Send me a message",
-      "desc": "If you'd like to start up a conversation, please fill in the form below or visit my profiles on LinkedIn or GitHub. Note: clicking 'Send' will open your email client.",
+      "header": "Get in touch",
+      "desc": "If you'd like to start up a conversation, fill in the form below or visit my profiles on LinkedIn or GitHub. Note: clicking 'Send' will open your email client.",
       "name": "Name",
       "email": "Email",
       "message": "Message",

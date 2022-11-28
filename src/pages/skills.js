@@ -7,7 +7,7 @@ const Skills = (props) => {
       role="animation"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.2 }}
+      transition={{ duration: 0.4 }}
     >
       {Object.keys(props.text).map((entry) => {
         if (entry === "intro") {

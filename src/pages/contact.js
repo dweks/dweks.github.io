@@ -9,7 +9,7 @@ const Contact = (props) => {
       role="animation"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.2 }}
+      transition={{ duration: 0.4 }}
     >
       <Card
         class={"card card-v"}
