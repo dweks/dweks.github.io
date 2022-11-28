@@ -46,13 +46,12 @@ p {
   font-weight: 300;
 }
 
-
 .p2 {
   font-weight: 400;
 }
 
 .p3 {
-  padding:0;
+  padding: 0;
   font-size: 12pt;
   align-self: center;
 }

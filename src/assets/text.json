@@ -154,7 +154,7 @@
       "proj4": {
         "header": "Technical Practice",
         "language": "Various Languages",
-        "desc1": "This is the repo for my answers to coding practice questions from various sources. Currently it contains a Roman numeral converter, a bubble sort implementation, a ransom note 'decoder', and a sliding window comparison.", 
+        "desc1": "This is the repo for my answers to coding practice questions from various sources. Currently it contains a Roman numeral converter, a bubble sort implementation, a ransom note 'decoder', and a sliding window comparison.",
         "sourcename": "GitHub",
         "url": "https://github.com/sqthreer/technical-question-practice"
       }

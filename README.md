@@ -1,13 +1,14 @@
 # sqthreer.github.io
+
 ## My web development portfolio
 
 This website was built using [ReactJS](https://create-react-app.dev/docs/getting-started) on
- [NodeJS](https://nodejs.org/en/) and deployed using [gh-pages](https://www.npmjs.com/package/gh-pages) to [sqthreer.github.io](https://sqthreer.github.io/about).
- See below for a list of all libraries and dependencies used.
- 
- The layout on a standard larger screen width (at least 600 pixels) has vertical navigation bar on the left. Each navigation link may have subnavigation links that animate into view below it. These subnavigation links are to points on the currently viewed page. On smaller screen widths (less than 600pixels) the site responds by switching to a horizontal navigation above the page content and hiding the logo, site name and page headers.
+[NodeJS](https://nodejs.org/en/) and deployed using [gh-pages](https://www.npmjs.com/package/gh-pages) to [sqthreer.github.io](https://sqthreer.github.io/about).
+See below for a list of all libraries and dependencies used.
 
- Site content is rendered in an independently scrolling container, and quickly fades into view as its content is loaded. Most content is organized into 'cards' with a header, subheader and description. The end of each page is marked by a short, rouned line.
+The layout on a standard larger screen width (at least 600 pixels) has vertical navigation bar on the left. Each navigation link may have subnavigation links that animate into view below it. These subnavigation links are to points on the currently viewed page. On smaller screen widths (less than 600pixels) the site responds by switching to a horizontal navigation above the page content and hiding the logo, site name and page headers.
+
+Site content is rendered in an independently scrolling container, and quickly fades into view as its content is loaded. Most content is organized into 'cards' with a header, subheader and description. The end of each page is marked by a short, rouned line.
 
 ## How to install and run the code:
 
@@ -41,7 +42,7 @@ This website was built using [ReactJS](https://create-react-app.dev/docs/getting
 - [ReactJS](https://create-react-app.dev/docs/getting-started) - React tutorials to learn the basics
 - [Anna Jimenez's blog](https://medium.com/@anna.tech/how-to-deploy-your-react-app-to-github-pages-ddab42743367) - Deploying the website on Github Pages
 - [Dafont](https://www.dafontfree.io/download/bahnschrift/) - Download page for Bahnschrift font
-- [Gaurav Vala's blog](https://dev.to/gaurav444/how-to-use-local-fonts-in-css-fbg) - Using local fonts in CSS 
+- [Gaurav Vala's blog](https://dev.to/gaurav444/how-to-use-local-fonts-in-css-fbg) - Using local fonts in CSS
 - [Web Dev Simplified](https://www.youtube.com/watch?v=Ul3y1LXxzdU&ab_channel=WebDevSimplified) - [**video**] How to use React Router
 - [Dave Sparks' blog](https://code.tutsplus.com/tutorials/css-fundamentals-css3-transitions--pre-10922) - CSS transitions
 - [Wikipedia](https://en.wikipedia.org/wiki/Comparison_of_browser_engines) - To learn more about browser engines

@@ -52,11 +52,7 @@ const About = (props) => {
             <h2>{props.text.bio1.subheader2}</h2>
             <ul>
               {props.text.bio1.courses.map((course) => {
-                return (
-                  <li key={course}>
-                    {course}
-                  </li>
-                );
+                return <li key={course}>{course}</li>;
               })}
             </ul>
           </>

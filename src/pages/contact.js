@@ -81,8 +81,16 @@ const Contact = (props) => {
           ></textarea>
         </div>
         <div aria-label="send and reset form buttons" id="buttons">
-          <input aria-label="opens email client to send message" type="submit" value="Send" />
-          <input aria-label="resets all text entry fields" type="reset" value="Reset" />
+          <input
+            aria-label="opens email client to send message"
+            type="submit"
+            value="Send"
+          />
+          <input
+            aria-label="resets all text entry fields"
+            type="reset"
+            value="Reset"
+          />
         </div>
       </form>
       <div aria-hidden="true" className="page-end" />
