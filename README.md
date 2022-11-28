@@ -12,10 +12,13 @@ This website was built using [ReactJS](https://create-react-app.dev/docs/getting
 ## How to install and run the code:
 
 1. Fork or clone the source code from [the dev branch](https://github.com/sqthreer/sqthreer.github.io) of the repo
-2. After installing [NodeJS](https://nodejs.org/en/), [React Router](https://www.npmjs.com/package/react-router), [React Router Hash Link](https://www.npmjs.com/package/react-router-hash-link), and [Framer-motion](https://www.npmjs.com/package/framer-motion), run `npm start` from the root directory
+2. After installing [NodeJS](https://nodejs.org/en/), [ReactJS](https://create-react-app.dev/docs/getting-started), [React Router](https://www.npmjs.com/package/react-router), [React Router Hash Link](https://www.npmjs.com/package/react-router-hash-link), and [Framer-motion](https://www.npmjs.com/package/framer-motion), run `npm start` from the root directory
 3. If npm doesn't open a browser automatically, open one and navigate to `localhost:3000`
 
-## Libraries/Dependencies
+## Libraries/Dependencies/Tools
+
+#### Every technology I used to make this project. Not listed in any particular order.
+
 - [ReactJS](https://create-react-app.dev/docs/getting-started) - UI building
 - [NodeJS](https://nodejs.org/en/) - Runtime
 - [gh-pages](https://www.npmjs.com/package/gh-pages) - Deployment
@@ -24,8 +27,15 @@ This website was built using [ReactJS](https://create-react-app.dev/docs/getting
 - [Framer-motion](https://www.npmjs.com/package/framer-motion) - Element animations
 - [ESLint](https://eslint.org/) - Linting
 - [Prettier](https://prettier.io/) - Formatting
+- [Visual Studio Code](https://code.visualstudio.com/Download)
+- [WAVE](https://wave.webaim.org/) - Accessibility evaluation
+- [Lighthouse](https://developer.chrome.com/docs/lighthouse/) - Accessibility evaluation
+- [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) - Debugging and inspecting React
+- [Photoshop](https://www.adobe.com/products/photoshop/landpa.html?sdid=KKQIN&mv=search&kw=photoshop&s_kwcid=AL!3085!10!78958833553060!20541713906&ef_id=b67a3cd701951e2e2cd25f520526e7d1:G:s&mv=search) - Site mockups and graphic design
 
 ## Sources
+
+#### The websites/blogs/videos I visited to fill the gaps in my knowledge I found along the way. Not listed in any particular order.
 
 - [MDN](https://developer.mozilla.org/en-US/) - Frequently used to check documentation for HTML, CSS and JavaScript
 - [ReactJS](https://create-react-app.dev/docs/getting-started) - React tutorials to learn the basics
@@ -44,3 +54,5 @@ This website was built using [ReactJS](https://create-react-app.dev/docs/getting
 - [Querythreads](https://www.querythreads.com/how-to-disable-es-lint-react-prop-types-rule-in-a-file/) - Disabling irrelevant rules in ESLint
 - [Sitepoint](https://www.sitepoint.com/how-to-use-aria-effectively-with-html5/) - Using Aria effectively
 - [Jamie Juviler](https://blog.hubspot.com/website/span-vs-div) - Understanding div and span elements
+- [Stack Overflow - Drew Reese](https://stackoverflow.com/questions/71984401/react-router-not-working-with-github-pages) - Provided solution to a late-discovered critical problem in my site
+- [Position is Everything](https://www.positioniseverything.net/css-import) - Importing CSS files into other CSS files
