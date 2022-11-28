@@ -62,7 +62,7 @@ function ContentHeader() {
     <header id="content-header">
       <div aria-hidden="true" id="sep" />
       <Routes>
-        <Route exact path="/" element={<Navigate to="/about" />} />
+        <Route index element={<Navigate to="/about" />} />
         {Object.keys(pageTitles).map((entry) => {
           return (
             <Route
@@ -91,18 +91,22 @@ function Content() {
   return (
     <main id="content">
       <Routes>
-        <Route exact path="/" element={<About text={aboutPageText} />} />
-        <Route path={"/about"} element={<About text={aboutPageText} />} />
-        <Route
-          path={"/experience"}
-          element={<Experience text={experiencePageText} />}
-        />
-        <Route path={"/skills"} element={<Skills text={skillsPageText} />} />
-        <Route
-          path={"/projects"}
-          element={<Projects text={projectsPageText} />}
-        />
-        <Route path={"/contact"} element={<Contact text={contactPageText} />} />
+        <Route exact path="/" element={<About text={aboutPageText} />}>
+          <Route path={"/about"} element={<About text={aboutPageText} />} />
+          <Route
+            path={"/experience"}
+            element={<Experience text={experiencePageText} />}
+          />
+          <Route path={"/skills"} element={<Skills text={skillsPageText} />} />
+          <Route
+            path={"/projects"}
+            element={<Projects text={projectsPageText} />}
+          />
+          <Route
+            path={"/contact"}
+            element={<Contact text={contactPageText} />}
+          />
+        </Route>
       </Routes>
     </main>
   );
