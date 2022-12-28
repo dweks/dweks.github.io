@@ -1,15 +1,21 @@
-import { Routes, Route, NavLink, Navigate } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  NavLink,
+  Navigate,
+  useLocation,
+} from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { Fragment } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 import Experience from "./pages/experience";
 import About from "./pages/about";
-import Contact from "./pages/contact";
-import Projects from "./pages/projects";
+// import Contact from "./pages/contact";
+import Work from "./pages/work";
 import Skills from "./pages/skills";
 
-import logoSmall from "./images/logo.png";
+// import logoSmall from "./images/logo.png";
 import text from "./assets/text.json";
 
 import "./styles/main.css";
@@ -18,23 +24,26 @@ import "./styles/main.css";
 const aboutPageText = JSON.parse(JSON.stringify(text.pages.about));
 const experiencePageText = JSON.parse(JSON.stringify(text.pages.experience));
 const skillsPageText = JSON.parse(JSON.stringify(text.pages.skills));
-const projectsPageText = JSON.parse(JSON.stringify(text.pages.projects));
-const contactPageText = JSON.parse(JSON.stringify(text.pages.contact));
+const workPageText = JSON.parse(JSON.stringify(text.pages.work));
+// const contactPageText = JSON.parse(JSON.stringify(text.pages.contact));
 const pageTitles = JSON.parse(JSON.stringify(text.pages));
 
 // Primary container for entire site; organized into two columns (rows on small screens)
 function Main() {
   return (
-    <div id="main">
-      <div id="main-one">
-        <Home id={"home-lg"} />
-        <Nav />
+    <>
+      <div id="bg-decor" />
+      <div id="main">
+        <div id="main-one">
+          <Home id={"home-lg"} />
+          <Nav />
+        </div>
+        <div id="main-two">
+          <ContentHeader />
+          <Content />
+        </div>
       </div>
-      <div id="main-two">
-        <ContentHeader />
-        <Content />
-      </div>
-    </div>
+    </>
   );
 }
 
@@ -42,16 +51,10 @@ function Main() {
 function Home(props) {
   return (
     <div id={props.id}>
-      <img
-        src={logoSmall}
-        alt="Thumbnail of Blake Stephens"
-        width="45px"
-        height="50px"
-      />
-      <div>
-        <h2>{text.myname}</h2>
-        <h3>{text.subtitle}</h3>
-      </div>
+      <NavLink key={text.homepage} to={"/" + text.homepage}>
+        <h1>{text.myname}</h1>
+        <h2>{text.subtitle}</h2>
+      </NavLink>
     </div>
   );
 }
@@ -71,9 +74,10 @@ function ContentHeader() {
               element={
                 <motion.h1
                   key={entry}
-                  initial={{ opacity: 0, y: -40 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.2 }}
+                  initial={{ width: 0, overflow: "hidden" }}
+                  animate={{ width: "auto" }}
+                  transition={{ ease: "easeOut", duration: 0.3 }}
+                  exit={{ width: 0, transition: { duration: 1 } }}
                 >
                   {entry}
                 </motion.h1>
@@ -88,73 +92,78 @@ function ContentHeader() {
 
 // Main content; where site links are loaded
 function Content() {
+  const location = useLocation();
   return (
     <main id="content">
-      <Routes>
-        <Route exact path="/" element={<About text={aboutPageText} />}>
+      {/* <div id="shad-top" /> */}
+      <AnimatePresence>
+        <Routes location={location} key={location.pathname}>
+          <Route exact path="/" element={<About text={aboutPageText} />} />
           <Route path={"/about"} element={<About text={aboutPageText} />} />
           <Route
             path={"/experience"}
             element={<Experience text={experiencePageText} />}
           />
           <Route path={"/skills"} element={<Skills text={skillsPageText} />} />
-          <Route
-            path={"/projects"}
-            element={<Projects text={projectsPageText} />}
-          />
-          <Route
+          <Route path={"/work"} element={<Work text={workPageText} />} />
+          {/* <Route
             path={"/contact"}
             element={<Contact text={contactPageText} />}
-          />
-        </Route>
-      </Routes>
+          /> */}
+        </Routes>
+      </AnimatePresence>
+      {/* <div id="shad-bot" /> */}
     </main>
   );
 }
 
 // Main navigation; vertical at higher screen widths, horizontal at lower
 function Nav() {
+  const location = useLocation();
   return (
-    <nav aria-label="Main site navigation" id="nav">
-      {Object.keys(pageTitles).map((page) => {
-        if (page === "contact") {
+    <>
+      <nav aria-label="Main site navigation" id="nav">
+        {Object.keys(pageTitles).map((page) => {
+          // if (page === "contact") {
+          //   return (
+          //     <NavLink
+          //       key={page}
+          //       to={"/" + page}
+          //       className={({ isActive }) => {
+          //         return isActive ? "nav-link nav-link-act" : "nav-link";
+          //       }}
+          //     >
+          //       {page}
+          //     </NavLink>
+          //   );
+          // }
+
           return (
-            <NavLink
-              key={page}
-              to={"/" + page}
-              className={({ isActive }) => {
-                return isActive ? "nav-link nav-link-act" : "nav-link";
-              }}
-            >
-              {page}
-            </NavLink>
-          );
-        }
-
-        return (
-          <Fragment key={page + "nav"}>
-            <NavLink
-              key={page}
-              to={"/" + page}
-              className={({ isActive }) => {
-                return isActive ? "nav-link nav-link-act" : "nav-link";
-              }}
-            >
-              {page}
-            </NavLink>
-            <Routes>
-              <Route
+            <Fragment key={page + "nav"}>
+              <NavLink
                 key={page}
-                path={"/" + page}
-                element={<SubNav key={page} page={page} />}
-              />
-            </Routes>
-          </Fragment>
-        );
-      })}
-
+                to={"/" + page}
+                className={({ isActive }) => {
+                  return isActive ? "nav-link nav-link-act" : "nav-link";
+                }}
+              >
+                {page}
+              </NavLink>
+              <AnimatePresence>
+                <Routes location={location} key={location.pathname}>
+                  <Route
+                    key={page}
+                    path={"/" + page}
+                    element={<SubNav key={page} page={page} />}
+                  />
+                </Routes>
+              </AnimatePresence>
+            </Fragment>
+          );
+        })}
+      </nav>
       <div aria-hidden="true" id="nav-end" />
-    </nav>
+    </>
   );
 }
 
@@ -172,16 +181,18 @@ const subnavs = {
   about: getSubnav(aboutPageText),
   experience: getSubnav(experiencePageText),
   skills: getSubnav(skillsPageText),
-  projects: getSubnav(projectsPageText),
+  work: getSubnav(workPageText),
 };
 
 function SubNav(props) {
   return (
     <motion.nav
-      className={"subnav"}
+      key={props.page}
+      className="subnav"
       initial={{ opacity: 0, height: 0 }}
-      animate={{ opacity: 1, height: "auto" }}
-      transition={{ duration: 0.2 }}
+      animate={{ opacity: 1, height: "auto", overflow: "hidden" }}
+      transition={{ ease: "easeOut", duration: 0.2 }}
+      exit={{ opacity: 0, height: 0 }}
       aria-label="subnavigation"
     >
       {subnavs[props.page].map((item) => {

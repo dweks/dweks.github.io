@@ -1,13 +1,26 @@
 :root {
-  --card-top: rgb(46, 44, 44);
-  --card-bot: #333232;
-  --card-single: #2b2928;
-  --card-bg2: #2e2c2c;
+  --card-top: hsl(200, 9%, 13%);
+  --card-bot: hsl(200, 9%, 18%);
+  --card-single: hsl(200, 4%, 10%);
+  --card-bg2: hsl(200, 4%, 18%);
+  --card-b: hsl(200, 9%, 28%);
+}
+
+.card-1 .p3 {
+  font-size: 12pt;
+  align-self: center;
+}
+
+.card-1 .p2 {
+  color: hsl(200, 15%, 75%);
+  font-weight: 300;
+  margin-top: -8px;
 }
 
 .card {
   margin-bottom: 15px;
   word-wrap: break-word;
+  box-shadow: 0 2px 4px 0 var(--liteshad);
 }
 
 .card-single {
@@ -33,14 +46,15 @@
 .card-h .card-1 {
   background-color: var(--card-top);
   padding: 10px;
-  border-radius: 16px 0px 0px 16px;
+  border-radius: 4px 0px 0px 3px;
+  border-right: 2px solid var(--card-b);
 }
 
 .card-h .card-2 {
   width: 100%;
   background-color: var(--card-bot);
-  padding: 5px 15px 10px 15px;
-  border-radius: 0px 15px 8px 0px;
+  padding: 15px;
+  border-radius: 0 4px 4px 0;
 }
 
 .card-v .card-1 {
@@ -49,30 +63,18 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 5px 15px 8px 15px;
-  border-radius: 16px 8px 0 0;
+  border-radius: 4px 4px 0 0;
+  border-bottom: 1px solid var(--card-b);
 }
 
 .card-v .card-2 {
-  padding: 5px 10px 13px 15px;
+  padding: 10px 20px 20px 20px;
   background-color: var(--card-bot);
   font-weight: 300;
-  border-radius: 0px 0px 8px 8px;
-}
-
-.card p3 {
-  align-self: center;
-  font-weight: 300;
+  border-radius: 0px 0px 4px 4px;
 }
 
 @media screen and (max-width: 675px) {
-  .card-v .card-1 {
-    flex-direction: column;
-  }
-
-  .card-1 p {
-    text-align: left;
-  }
-
   .card {
     margin: 8px 3px;
   }
@@ -84,12 +86,18 @@
   }
 
   .card-h .card-1 {
-    border-radius: 10px 10px 0 0;
+    border-radius: 4px 4px 0 0;
+    border-right: 0;
+    border-bottom: 2px solid var(--card-b);
   }
 
   .card-h .card-2 {
     width: auto;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 4px 4px;
+  }
+
+  .card-1 {
+    align-items: center;
   }
 
   .card p3 {

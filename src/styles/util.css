@@ -15,15 +15,17 @@
   --gray: rgb(200, 200, 200);
   --gray1: rgb(190, 190, 190);
   --gray2: rgb(140, 140, 140);
-  --gray3: rgb(110, 110, 110);
+  --gray3: hsl(200, 15%, 30%);
   --gray4: rgb(80, 80, 80);
   --gray5: rgb(60, 60, 60);
   --orange: #bd906c;
-  --a: #baa987;
-  --ahov: #ba9587;
+  --a: hsl(190, 35%, 60%);
+  --ahov: hsl(180, 25%, 80%);
   --li-fg: rgb(200, 200, 200);
-  --bullet: #97665a;
-  --h2: #c8b79a;
+  --bullet: hsl(200, 15%, 47%);
+
+  --h1: hsl(200, 35%, 70%);
+  --h2: hsl(190, 30%, 70%);
 }
 
 a {
@@ -40,24 +42,12 @@ a:hover {
 p {
   font-size: larger;
   margin: 0;
-  margin-top: 0;
-  margin-bottom: 5px;
   padding-top: 5px;
   font-weight: 300;
 }
 
-.p2 {
-  font-weight: 400;
-}
-
-.p3 {
-  padding: 0;
-  font-size: 12pt;
-  align-self: center;
-}
-
 h1 {
-  color: var(--orange);
+  color: var(--h1);
   font-weight: 100;
   font-size: 22pt;
   margin: 0px 0px 2px 0px;

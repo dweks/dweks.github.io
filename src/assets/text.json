@@ -1,11 +1,16 @@
 {
   "myname": "Blake Stephens",
   "subtitle": "Dev Portfolio",
+  "homepage": "about",
   "pages": {
     "about": {
       "intro": {
         "greeting": "Hey, I'm Blake.",
-        "desc": "I'm a software developer and an enthusiast of computer science and programming. I'm nearly graduated with my Bachelor's degree in Computer Science and itching to put my training to use in the software industry."
+        "desc": "I'm a software developer and an enthusiast of computer science and programming. I have spent the past four years earning a Bachelor's Degree in Computer Science to satisfy my long-running fascination with computers and to build functional skills I can use in a career. Over the past several years I've spent in school I have also learned that I am effective at dedicating myself to filling gaps in my knowledge as I encounter them. My eagerness to impress drives my motivation to get better at everything I do.",
+        "gh": "GitHub",
+        "li": "LinkedIn",
+        "ghurl": "https://github.com/sqthreer",
+        "liurl": "https://www.linkedin.com/in/blake-stephens-01bb5a42/"
       },
       "bio1": {
         "header": "Education",
@@ -22,22 +27,23 @@
         },
         "subheader2": "Courses",
         "courses": [
-          "CS 163: Data Structures",
-          "CS 201: Computer Systems Programming",
-          "CS 202: Programming Methodologies and Software Implementation",
-          "CS 300: Elements of Software Engineering",
-          "CS 320: Principles of Programming Languages",
-          "CS 333: Operating Systems",
-          "CS 350: Algorithms and Complexity",
-          "CS 486: Database Management Systems",
-          "CS 311: Computational Structures",
-          "CS 410: Programming in Rust",
-          "CS 410: Web Development",
-          "CS 410: Code Reading & Review",
-          "CS 410: Exploring Fractals",
-          "CS 491: Computer Security",
-          "MTH 261: Intro to Linear Algebra",
-          "MTH 356: Discrete Mathematics"
+          "Data Structures",
+          "Computer Systems Programming",
+          "Programming Methodologies and Software Implementation",
+          "Elements of Software Engineering",
+          "Principles of Programming Languages",
+          "Operating Systems",
+          "Algorithms and Complexity",
+          "Database Management Systems",
+          "Computational Structures",
+          "Programming in Rust",
+          "Web Development",
+          "Code Reading & Review",
+          "Exploring Fractals",
+          "Computer Security",
+          "Linear Algebra",
+          "Calculus",
+          "Discrete Mathematics"
         ]
       },
       "bio2": {
@@ -66,7 +72,7 @@
       },
 
       "exp2": {
-        "header": "Front-end Developer",
+        "header": "Frontend Developer",
         "subheader": "PSU: Capstone Project",
         "date": "March 2022 to September 2022",
         "desc": "My participation in the Capstone project got me introduced to git workflows, front-end technologies and frameworks, and the beauty of collaboration.",
@@ -80,10 +86,10 @@
       },
 
       "exp3": {
-        "header": "IT Help Desk Volunteer",
+        "header": "Help Desk Volunteer",
         "subheader": "Portland State University",
         "date": "October 2020 to May 2021",
-        "desc": "As a member of The Computer Action Team -the organization responsible for the technical infrastructure of Maseeh College of Engineering and Computer Science- I learned how to navigate and interact with a Linux environment to solve problems.",
+        "desc": "As a member of The Computer Action Team -the organization responsible for the technical infrastructure of Maseeh College of Engineering and Computer Science- I learned how to listen to user's describe their IT issues and respectfully guide them to solutions. Much of our day-to-day responsibilities involved writing and running scripts in a Linux environment to gather information or solve problems.",
         "list": [
           "Working directly with MCECS students and faculty for IT troubleshooting",
           "Collaborating on revisions to technical documentation and website content",
@@ -94,7 +100,7 @@
     },
 
     "skills": {
-      "intro": "Most of the skills listed below come from my education and work experience, but some are an effect of exploring extracurricular projects.",
+      "intro": "I consider myself very open to learning new technologies and using best practices when coding and developing.",
       "skill1": {
         "header": "Language",
         "desc": "C, C++, Python, Java, HTML, CSS, TypeScript/JavaScript, Bash Script, Rust, SQL"
@@ -121,7 +127,7 @@
       }
     },
 
-    "projects": {
+    "work": {
       "intro": "Some of the below are assignments from coursework, others are personal projects. I tend to take on personal projects to gain familiarity with languages or libraries while solving some kind of problem.",
       "proj1": {
         "header": "Isle of Trust",
@@ -158,18 +164,6 @@
         "sourcename": "GitHub",
         "url": "https://github.com/sqthreer/technical-question-practice"
       }
-    },
-
-    "contact": {
-      "header": "Get in touch",
-      "desc": "If you'd like to start up a conversation, fill in the form below or visit my profiles on LinkedIn or GitHub. Note: clicking 'Send' will open your email client.",
-      "name": "Name",
-      "email": "Email",
-      "message": "Message",
-      "gh": "GitHub",
-      "li": "LinkedIn",
-      "ghurl": "https://github.com/sqthreer",
-      "liurl": "https://www.linkedin.com/in/blake-stephens-01bb5a42/"
     }
   }
 }

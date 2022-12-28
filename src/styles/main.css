@@ -5,14 +5,17 @@
 @import "pages.css";
 
 :root {
-  --page-end: #363331;
-  --page-bg: #21201f;
-  --page-bg2: #1d1c1b;
-  --page-bg3: #242221;
-  --home: #bfb2ac;
-  --home-sub: rgb(204, 194, 190);
-  --sep: #5e524f;
-  --top-row-height: 80px;
+  --page-bg: hsl(200, 9%, 12%);
+  --page-end: hsl(200, 10%, 25%);
+  --page-bg2: hsl(200, 50%, 10%);
+  --page-bg3: hsl(200, 4%, 15%);
+  --home: hsl(190, 10%, 70%);
+  --bg-decor: linear-gradient(hsl(200, 5%, 9%), var(--page-bg));
+  --home-subheader: hsl(200, 10%, 50%);
+  --top-row-height: 90px;
+  --darkshad: hsl(200, 9%, 10%);
+  --liteshad: hsl(200, 9%, 14%);
+  --topline: hsl(200, 15%, 40%);
 }
 
 body {
@@ -24,57 +27,70 @@ body {
   margin: 0 auto;
 }
 
+#bg-decor {
+  background-image: var(--bg-decor);
+  border-top: 7px solid hsl(200, 9%, 14%);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: -1;
+}
+
 #main {
   display: flex;
   flex-direction: row;
   max-height: 99vh;
+  margin-top: 5px;
 }
 
 #main-one {
-  width: 220px;
+  width: 190px;
   display: flex;
   flex-direction: column;
   justify-items: center;
-  margin-right: 8px;
+  margin-right: 4px;
 }
 
 #main-two {
   display: flex;
   flex-direction: column;
   width: 55vw;
-  max-width: 700px;
+  max-width: 900px;
   max-height: 100%;
 }
 
 #home-lg {
   display: flex;
+  background-color: var(--homebg);
   flex-flow: row wrap;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
-  display: flex;
-  width: 100%;
+  align-content: center;
   height: var(--top-row-height);
   min-height: var(--top-row-height);
+  border-bottom: 2px solid var(--topline);
+  margin-bottom: 3px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  text-align: right;
 }
 
-#home-lg img {
-  margin-top: 5px;
-  margin-right: 3px;
+#home-lg a {
+  text-decoration: none;
+}
+
+#home-lg h1 {
+  color: var(--home);
+  font-size: 20pt;
+  font-weight: 200;
 }
 
 #home-lg h2 {
-  color: var(--home);
-  font-size: 18pt;
-  font-weight: 200;
-  margin: 0;
-}
-
-#home-lg h3 {
-  margin: 0;
-  margin-top: -2px;
-  font-size: 9pt;
+  margin: -2px 0 0 0;
+  font-size: 10pt;
   font-weight: 500;
-  color: var(--home-sub);
+  color: var(--home-subheader);
 }
 
 @media screen and (max-width: 600px) {

@@ -2,7 +2,7 @@ import Card from "../card";
 import flink from "../images/foreign-link.png";
 import { motion } from "framer-motion";
 
-const Projects = (props) => {
+const Work = (props) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -26,7 +26,7 @@ const Projects = (props) => {
               <div className="proj-one">
                 <div className="headers">
                   <h1>{props.text[entry].header}</h1>
-                  <p2>{props.text[entry].language}</p2>
+                  <p className="p2">{props.text[entry].language}</p>
                 </div>
                 <div className="flink">
                   <img
@@ -60,4 +60,4 @@ const Projects = (props) => {
   );
 };
 
-export default Projects;
+export default Work;
