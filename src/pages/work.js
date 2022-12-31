@@ -28,21 +28,20 @@ const Work = (props) => {
                   <h1>{props.text[entry].header}</h1>
                   <p className="p2">{props.text[entry].language}</p>
                 </div>
-                <div className="flink">
+                <a
+                  className="flink"
+                  href={props.text[entry].url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img
                     className="flink-icon"
                     src={flink}
                     alt="foreign link icon"
                     aria-hidden="true"
                   />
-                  <a
-                    href={props.text[entry].url}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {props.text[entry].sourcename}
-                  </a>
-                </div>
+                  {props.text[entry].sourcename}
+                </a>
               </div>
             }
             two={

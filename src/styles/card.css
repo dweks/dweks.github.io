@@ -1,6 +1,6 @@
 :root {
-  --card-top: hsl(200, 9%, 13%);
-  --card-bot: hsl(200, 9%, 18%);
+  --card-top: hsl(200, 6%, 13%);
+  --card-bot: hsl(200, 6%, 19%);
   --card-single: hsl(200, 4%, 10%);
   --card-bg2: hsl(200, 4%, 18%);
   --card-b: hsl(200, 9%, 28%);
@@ -77,6 +77,10 @@
 @media screen and (max-width: 675px) {
   .card {
     margin: 8px 3px;
+  }
+
+  .card-1 {
+    text-align: center;
   }
 }
 

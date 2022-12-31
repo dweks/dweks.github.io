@@ -1,17 +1,17 @@
 :root {
   --nav-bg-sm: linear-gradient(hsl(200, 9%, 10%), hsl(200, 9%, 12%));
-  --navbg: hsl(200, 9%, 15%);
+  --navbg: hsl(200, 6%, 15%);
   --nav-link-fg: hsl(200, 9%, 75%);
 
-  --nav-link-act-fg: hsl(190, 20%, 70%);
+  --nav-link-act-fg: hsl(190, 10%, 70%);
   --nav-link-act-bg: var(--page-bg);
   --nav-link-act-bb: hsl(200, 9%, 23%);
 
   --nav-link-hover-fg: hsl(190, 30%, 60%);
-  --nav-link-hover-bg: hsl(200, 9%, 13%);
+  --nav-link-hover-bg: hsl(200, 5%, 13%);
 
-  --subnav-fg: hsl(190, 25%, 70%);
-  --subnav-hover-fg: hsl(200, 60%, 75%);
+  --subnav-fg: hsl(200, 25%, 70%);
+  --subnav-hover-fg: hsl(200, 60%, 85%);
   --nav-end: hsl(200, 5%, 18%);
 }
 
@@ -47,6 +47,7 @@
   width: 100%;
   margin-bottom: 8px;
   padding: 4px 0 5px 10px;
+  border-radius: 3px 3px 0 0;
 
   color: var(--nav-link-fg);
   transition: color 0.1s ease, background-color 0.1s ease;
@@ -57,7 +58,6 @@
 
 .nav-link:hover {
   color: var(--nav-link-hover-fg);
-  border-radius: 0;
   background-color: var(--nav-link-hover-bg);
 }
 
@@ -65,7 +65,6 @@
   color: var(--nav-link-act-fg);
   background-color: var(--nav-link-act-bg);
   border-bottom: 1px solid var(--nav-link-act-bb);
-  border-radius: 3px 0 0 3px;
 }
 
 .subnav {

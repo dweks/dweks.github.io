@@ -6,7 +6,7 @@
     "about": {
       "intro": {
         "greeting": "Hey, I'm Blake.",
-        "desc": "I'm a software developer and an enthusiast of computer science and programming. I have spent the past four years earning a Bachelor's Degree in Computer Science to satisfy my long-running fascination with computers and to build functional skills I can use in a career. Over the past several years I've spent in school I have also learned that I am effective at dedicating myself to filling gaps in my knowledge as I encounter them. My eagerness to impress drives my motivation to get better at everything I do.",
+        "desc": "I'm an aspiring software developer and an enthusiast of computer science and programming. I have spent the past four years earning a Bachelor's Degree in Computer Science to satisfy my long-running fascination with computers and to build functional skills I can use in a career. With the time I've spent in college I have learned that I am effective at dedicating myself to filling gaps in my knowledge as I encounter them. My eagerness to impress and create drives my motivation to get better at everything I do.",
         "gh": "GitHub",
         "li": "LinkedIn",
         "ghurl": "https://github.com/sqthreer",
@@ -14,12 +14,12 @@
       },
       "bio1": {
         "header": "Education",
-        "desc": "I have spent the past six years finishing my Associate's Degree and getting my Bachelor's in Computer Science. The courses for my major introduced me to the fundamentals of a broad range of computer science principles.",
+        "desc": "The courses for my computer science major introduced me to the fundamentals of a broad range of computer science principles and practices. On top of that, I discovered how important it is to be relentless if your goal is to understand something.",
         "subheader1": "Degrees",
         "degree1": {
           "header": "Bachelor of Science in Computer Science",
           "date": "September 2018 to December 2022",
-          "gpa": "Major GPA: 3.57"
+          "gpa": "Major GPA: 3.50"
         },
         "degree2": {
           "header": "Associate Degree in General Studies",
@@ -54,7 +54,7 @@
     },
 
     "experience": {
-      "intro": "My work and programming experience includes code collaboration with peers, designing and building computer science course material and troubleshooting Linux infrastructure.\r",
+      "intro": "My work and programming experience includes code collaboration with peers, designing and building computer science course material, IT troubleshooting on a Linux infrastructure, and lots of pizza.\r",
 
       "exp1": {
         "header": "Lab Facilitator",
@@ -96,11 +96,23 @@
           "Attending weekly informational presentations on IT subjects",
           "Troubleshooting Linux system infrastructure issues"
         ]
+      },
+      "exp4": {
+        "header": "Shift Manager",
+        "subheader": "Mississippi Pizza",
+        "date": "January 2016 to January 2022",
+        "desc": "In this job I learned how to cooperate with my peers and communicate clearly and efficiently with customers. My time in a position of authority taught me how to respectfully interact with subordinates to maintain an awareness and coordination of time-sensitive tasks.",
+        "list": [
+          "Overseeing and delegating essential duties to staff of up to eight",
+          "Regularly communicating with upper-management and accounting staff",
+          "Diffusing confrontational interactions among staff or patrons",
+          "Ensuring product quality in a fast-paced environment"
+        ]
       }
     },
 
     "skills": {
-      "intro": "I consider myself very open to learning new technologies and using best practices when coding and developing.",
+      "intro": "I am very open to learning new technologies and using best practices when coding and developing. My curiousity motivates me to learn unfamiliar technologies and dev strategies, but my intent to be an asset to my employer motivates me to hone the skills I've got.",
       "skill1": {
         "header": "Language",
         "desc": "C, C++, Python, Java, HTML, CSS, TypeScript/JavaScript, Bash Script, Rust, SQL"
@@ -113,7 +125,7 @@
 
       "skill3": {
         "header": "Libraries/Frameworks",
-        "desc": "C++ STL, ReactJS, NodeJS, Bootstrap, jQuery/AJAX"
+        "desc": "C++ STL, React, NodeJS, Bootstrap, jQuery/AJAX"
       },
 
       "skill4": {
@@ -128,39 +140,57 @@
     },
 
     "work": {
-      "intro": "Some of the below are assignments from coursework, others are personal projects. I tend to take on personal projects to gain familiarity with languages or libraries while solving some kind of problem.",
+      "intro": "I tend to take on personal projects to gain some exposure to different languages, libraries or frameworks. The work listed below range from an interactive web application to command-line utilities.",
       "proj1": {
         "header": "Isle of Trust",
-        "language": "ReactJS with TypeScript",
+        "language": "React with TypeScript",
         "sourcename": "GitLab",
         "url": "https://gitlab.cecs.pdx.edu/prisoners-dilemma/site",
         "desc1": "An SPA web application for visualizing the effects of an individual's influence in a complex environment of personalities.",
-        "desc2": "The project was built with ReactJS on NodeJS supported with graphics and animation using KonvaJS. We used an MVC architecture to organize our data structure interactions. Our development strategy was to use CI/CD where we each took on different development roles.",
-        "desc3": "My contribution included implementation of a weighted, directed graph interface, modeling other data structures, animation rendering, and of course, debugging anything I could."
+        "desc2": "The project was built with React on Node supported with graphics and animation using Konva. We used an MVC architecture to organize our data structure interactions. Our development strategy was to use CI/CD where we each took on different development roles.",
+        "desc3": "My contributions included implementation of a weighted, directed graph interface, modeling simpler data structures, animation rendering, and of course, debugging anything I could."
       },
 
       "proj2": {
         "header": "qnot",
-        "language": "python with SQLite",
-        "desc1": "A command-based note-taking utility designed for people who spend a lot of time in a terminal.",
-        "desc2": "With qnot the user can quickly add a tagged note to a local SQLite database, straight from the command line without opening an interface. Notes can also be created and edited with the user's default text editor. ",
-        "desc3": "Tagging notes is built in to the note-taking itself by allowing a '+' to be put before a word to turn it into a tag. Viewing and managing notes can be done via command line arguments and will open an interactive, command-based environment.",
+        "language": "Python with SQLite and Regex",
+        "desc1": "A command-based note-taking utility designed for people who spend a lot of time with a terminal open.",
+        "desc2": "With qnot the user can quickly add a tagged note to a local SQLite database, straight from the command line without opening an interface. Notes can also be created and edited with the user's default text editor or imported from existing files.",
+        "desc3": "Although qnot makes it easy to add tagged notes with a single command from the Linux prompt, it also comes with a robust interface that enables many ways of retrieving and managing notes. Users can gather by tag or search the title and body of notes for keywords. Qnot also supports easily selecting multiple notes for exporting, merging, and batch deleting. A built-in, keyword-based help command allows users to figure out exactly how to use a particular qnot feature, or to understand general usage.",
         "sourcename": "GitHub",
         "url": "https://github.com/sqthreer/qnot"
       },
 
       "proj3": {
-        "header": "solitaire",
-        "language": "Java",
-        "desc1": "A text-based game of solitaire; playable in a command-line.",
+        "header": "Portfolio",
+        "language": "React, Node, JavaScript, HTML, CSS, JSON",
+        "desc1": "The site you're on now! This began as a final project for a web development class but I have continued its development as a portfolio.",
+        "desc2": "This SPA was build on Node using React and Framer Motion for the UI and React Router to handle routing. Check out the README on the repo for a full list of dependencies and resources used.",
+        "sourcename": "GitHub",
+        "url": "https://github.com/sqthreer/sqthreer.github.io"
+      },
+
+      "proj4": {
+        "header": "Solitaire",
+        "language": "Java, Regex",
+        "desc1": "A text-based game of solitaire playable in a command-line. Not yet completed!",
         "sourcename": "GitHub",
         "url": "https://github.com/sqthreer/solitaire"
       },
 
-      "proj4": {
+      "proj5": {
+        "header": "Morse DeGOder",
+        "language": "Go",
+        "desc1": "A toy program to get some familiarity with Golang and take advantage of an opportunity to use a pun. It is a simple utility for decoding a string as morse code. Users can also customize which characters to consider 'dots' and 'dashes' for the purpose of finding secret messages in long strings of random text.",
+        "desc2": "Uses a hard-coded binary tree structure to interpret strings then outputs what was decoded.",
+        "sourcename": "GitHub",
+        "url": "https://github.com/sqthreer/morse-deGOder"
+      },
+
+      "proj6": {
         "header": "Technical Practice",
         "language": "Various Languages",
-        "desc1": "This is the repo for my answers to coding practice questions from various sources. Currently it contains a Roman numeral converter, a bubble sort implementation, a ransom note 'decoder', and a sliding window comparison.",
+        "desc1": "This is the repo for my answers to coding practice questions from various sources. Currently it contains a Roman numeral converter, a bubble sort implementation, a ransom note decoder, and a sliding window comparison.",
         "sourcename": "GitHub",
         "url": "https://github.com/sqthreer/technical-question-practice"
       }

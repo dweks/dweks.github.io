@@ -74,14 +74,12 @@ const About = (props) => {
           two={
             <>
               <p>{props.text.bio1.desc}</p>
-
               <h2>{props.text.bio1.subheader1}</h2>
 
               <div className="indent">
                 <p className="p2">{props.text.bio1.degree1.header}</p>
                 <p className="p3">{props.text.bio1.degree1.date}</p>
                 <p className="p3">{props.text.bio1.degree1.gpa}</p>
-
                 <p className="p2">{props.text.bio1.degree2.header}</p>
                 <p className="p3">{props.text.bio1.degree2.date}</p>
               </div>
