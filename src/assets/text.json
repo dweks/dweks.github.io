@@ -6,7 +6,7 @@
     "about": {
       "intro": {
         "greeting": "Hey, I'm Blake.",
-        "desc": "I'm a software developer and an enthusiast of computer science and programming. I have spent the past four years earning a Bachelor's Degree in Computer Science to satisfy my long-running fascination with computers and to build functional skills I can use in a career. Over the past several years I've spent in school I have also learned that I am effective at dedicating myself to filling gaps in my knowledge as I encounter them. My eagerness to impress drives my motivation to get better at everything I do.",
+        "desc": "I'm a software developer and an enthusiast of computer science and programming. I have spent the last four years earning a Bachelor's Degree in Computer Science to satisfy my long-running fascination with computers and to build functional skills for use in a career. Over the past several years I've spent in school I learned how to be effective at dedicating myself to filling gaps in my knowledge as I encounter them. My eagerness to impress drives my motivation to get better at everything I do.",
         "gh": "GitHub",
         "li": "LinkedIn",
         "ghurl": "https://github.com/sqthreer",
@@ -77,10 +77,10 @@
         "date": "March 2022 to September 2022",
         "desc": "My participation in the Capstone project got me introduced to git workflows, front-end technologies and frameworks, and the beauty of collaboration.",
         "list": [
-          "Developing an interactive web application using Node.js and React.js with TypeScript",
+          "Developing an interactive web application using Node and React with TypeScript",
           "Data modeling for a graph data structure implemented with an MVC architecture",
           "Scrum-like collaborative procedures with a team of peers",
-          "Collaborating with continuous integration using git and GitLab with CI/CD",
+          "Collaborating with CI/CD using git and GitLab",
           "Researching unfamiliar technologies for use in project development"
         ]
       },
@@ -89,7 +89,7 @@
         "header": "Help Desk Volunteer",
         "subheader": "Portland State University",
         "date": "October 2020 to May 2021",
-        "desc": "As a member of The Computer Action Team -the organization responsible for the technical infrastructure of Maseeh College of Engineering and Computer Science- I learned how to listen to user's describe their IT issues and respectfully guide them to solutions. Much of our day-to-day responsibilities involved writing and running scripts in a Linux environment to gather information or solve problems.",
+        "desc": "As a member of The Computer Action Team -the organization responsible for the technical infrastructure of Maseeh College of Engineering and Computer Science- I learned how to listen to users describe their IT issues and respectfully guide them to solutions. Much of our day-to-day responsibilities involved writing and running scripts in a Linux environment to gather information or solve problems.",
         "list": [
           "Working directly with MCECS students and faculty for IT troubleshooting",
           "Collaborating on revisions to technical documentation and website content",
@@ -100,7 +100,7 @@
     },
 
     "skills": {
-      "intro": "I consider myself very open to learning new technologies and using best practices when coding and developing.",
+      "intro": "I am very open to learning new technologies and using best practices when coding and developing.",
       "skill1": {
         "header": "Language",
         "desc": "C, C++, Python, Java, HTML, CSS, TypeScript/JavaScript, Bash Script, Rust, SQL"
@@ -131,7 +131,7 @@
       "intro": "Some of the below are assignments from coursework, others are personal projects. I tend to take on personal projects to gain familiarity with languages or libraries while solving some kind of problem.",
       "proj1": {
         "header": "Isle of Trust",
-        "language": "ReactJS with TypeScript",
+        "language": "React with TypeScript",
         "sourcename": "GitLab",
         "url": "https://gitlab.cecs.pdx.edu/prisoners-dilemma/site",
         "desc1": "An SPA web application for visualizing the effects of an individual's influence in a complex environment of personalities.",
