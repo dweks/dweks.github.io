@@ -6,7 +6,7 @@
     "about": {
       "intro": {
         "greeting": "Hey, I'm Blake.",
-        "desc": "I'm a software developer and an enthusiast of computer science and programming. I have spent the last four years earning a Bachelor's Degree in Computer Science to satisfy my long-running fascination with computers and to build functional skills for use in a career. Over the past several years I've spent in school I learned how to be effective at dedicating myself to filling gaps in my knowledge as I encounter them. My eagerness to impress drives my motivation to get better at everything I do.",
+        "desc": "I'm an aspiring professional developer and a general enthusiast of computer science. I have spent the last four years earning a Bachelor's Degree in Computer Science to satisfy my long-running fascination with computers and to build functional skills for use in a meaningful career. From my adventure through school I learned how to dedicate myself to filling gaps in my knowledge on the fly and developed a passion for solving problems. My desire to impress and and understand drives me to get better at everything I do.",
         "gh": "GitHub",
         "li": "LinkedIn",
         "ghurl": "https://github.com/sqthreer",
@@ -14,7 +14,7 @@
       },
       "bio1": {
         "header": "Education",
-        "desc": "The courses for my computer science major introduced me to the fundamentals of a broad range of computer science principles and practices. On top of that, I discovered how important it is to be relentless if your goal is to understand something.",
+        "desc": "The courses for my computer science major introduced me to the fundamentals of a broad range of computer science principles and practices including object-oriented programming, unit testing, efficiency considerations in algorithms, and how to pick and use the right data structure for the job.",
         "subheader1": "Degrees",
         "degree1": {
           "header": "Bachelor of Science in Computer Science",
@@ -48,8 +48,8 @@
       },
       "bio2": {
         "header": "Otherwise",
-        "desc1": "Outside of computers and programming I like to be in the outdoors. It can be a solo adventure to a new fishing spot, a few friends on a camping trip or boogie boarding in the freezing Pacific ocean-- and I'll be happy.",
-        "desc2": "At home, if I'm not working on coding projects I like to read, draw, or build. Generally I prefer to spend my time either making something or moving around."
+        "desc1": "It may be unusual coming from a computer enthusiast, but I also like to spend time outdoors. Maybe it serves as a counter-balance to being at the keyboard so much, but I am always open to getting outside. It can be a solo expedition to a new fishing spot, having a few friends on a camping trip or boogie boarding in the ocean-- and I'll be satisfied.",
+        "desc2": "At home, if I'm not working on coding projects I'll likely be reading, studying something, or rewatching my favorite 90's sitcoms."
       }
     },
 
